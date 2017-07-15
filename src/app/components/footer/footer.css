@@ -1,0 +1,69 @@
+#myFooter {
+  background: #36424B;
+  color: #e2e2e2;
+  position: absolute;
+  width: 100%;
+}
+#myFooter .footer-copyright {
+  background-color: #262c35;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+#myFooter .footer-copyright p {
+  margin: 10px;
+  color: #e2e2e2;
+}
+#myFooter ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
+}
+#myFooter h5 {
+  font-size: 18px;
+  color: #e2e2e2;
+  font-weight: bold;
+  margin-top: 30px;
+}
+#myFooter a {
+  color: #e2e2e2;
+  text-decoration: none;
+}
+#myFooter a:hover,
+#myFooter a:focus {
+  text-decoration: none;
+  color: #e2e2e2;
+}
+#myFooter .myCols {
+  text-align: center;
+}
+#myFooter .social-networks {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 38px;
+}
+#myFooter .social-networks a {
+  font-size: 32px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #e2e2e2;
+  padding: 10px;
+  transition: 0.2s;
+}
+#myFooter .social-networks a:hover {
+  text-decoration: none;
+}
+#myFooter .facebook:hover {
+  color: #0077e2;
+}
+#myFooter .google:hover {
+  color: #ef1a1a;
+}
+#myFooter .twitter:hover {
+  color: #00aced;
+}
+@media screen and (max-width: 767px) {
+  #myFooter {
+    text-align: center;
+  }
+}

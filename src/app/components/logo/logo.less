@@ -1,0 +1,27 @@
+@fillhover: rgba(122, 156, 193, .5);
+@left_1_: rgba(252, 218, 67, .9);
+@right_1_: rgba(0, 0, 0, 0.1);
+.mainlogo,
+.right_1_,
+.left_1_ {
+  -webkit-transition: 1s;
+  transition: 1s;
+  text-align: center;
+}
+
+.mainlogo svg {
+    height: 50px;
+}
+
+.mainlogo:hover .right_1_
+{
+  fill: @fillhover;
+}
+
+.right_1_ {
+  fill: @right_1_;
+}
+
+.left_1_ {
+  fill: @left_1_;
+}

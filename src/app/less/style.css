@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+body {
+  background-color: #222222;
+}
+.overflow {
+  overflow: hidden;
+}
+.mainBlock,
+.aboutBlock,
+.portfolioBlock,
+.contactsBlock {
+  padding: 100px 15px 60px 15px;
+  min-height: 100vh;
+  max-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+  -moz-transform: translate3d(0, 0, 0) scaleX(1);
+  -ms-transform: translate3d(0, 0, 0) scaleX(1);
+  -o-transform: translate3d(0, 0, 0) scaleX(1);
+  transform: translate3d(0, 0, 0) scaleX(1);
+}
+.mainBlock {
+  background: url(../../assets/images/background/1.jpg) top center fixed;
+  background-size: cover;
+}
+.aboutBlock {
+  background: url(../../assets/images/background/2.jpg) top center fixed;
+  background-size: cover;
+}
+.portfolioBlock {
+  background: url(../../assets/images/background/3.jpg) top center fixed;
+  background-size: cover;
+}
+.contactsBlock {
+  background: url(../../assets/images/background/4.jpg) top center fixed;
+  background-size: cover;
+}
+/*Main Title for all pages*/
+.maintitle {
+  text-align: center;
+  position: relative;
+  top: 30vh;
+  overflow: hidden;
+}
+.maintitle h1 {
+  cursor: default;
+  margin: 0;
+  max-width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #f8f8f8;
+  font-size: 8vw;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+@media (orientation: portrait) {
+  .maintitle h1 {
+    left: 0;
+    font-size: 16vw;
+  }
+}
+.maintitle h4 {
+  margin: 0;
+  max-width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #f8f8f8;
+  font-size: 3vw;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+@media (orientation: portrait) {
+  .maintitle h4 {
+    left: 0;
+    font-size: 8vw;
+  }
+}
+/*Main Title for all pages*/

@@ -1,0 +1,93 @@
+@mainBlockbg: url(../../assets/images/background/1.jpg) top center fixed;
+@aboutbg: url(../../assets/images/background/2.jpg) top center fixed;
+@portfolio: url(../../assets/images/background/3.jpg) top center fixed;
+@contacts: url(../../assets/images/background/4.jpg) top center fixed;
+@Blocsminheight: 100vh;
+@Blocsmaxheight: 100%;
+@paddingAllBlocks: 100px 15px 60px 15px;
+@bgSize: cover;
+@trasform: translate3d(0, 0, 0) scaleX(1);
+
+body {
+  background-color: #222222;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.mainBlock,
+.aboutBlock,
+.portfolioBlock,
+.contactsBlock {
+  padding: @paddingAllBlocks;
+  min-height: @Blocsminheight;
+  max-height: @Blocsmaxheight;
+  -webkit-transform: @trasform;
+  -moz-transform: @trasform;
+  -ms-transform: @trasform;
+  -o-transform: @trasform;
+  transform: @trasform;
+}
+
+.mainBlock {
+  background: @mainBlockbg;
+  background-size: @bgSize;
+}
+
+.aboutBlock {
+  background: @aboutbg;
+  background-size: @bgSize;
+}
+
+.portfolioBlock {
+  background: @portfolio;
+  background-size: @bgSize;
+}
+
+.contactsBlock {
+  background: @contacts;
+  background-size: @bgSize;
+}
+
+/*Main Title for all pages*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+
+.maintitle {
+  text-align: center;
+  position: relative;
+  top: 30vh;
+  overflow: hidden;
+}
+
+.maintitle h1 {
+  cursor: default;
+  margin: 0;
+  max-width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #f8f8f8;
+  font-size: 8vw;
+  font-weight: 100;
+  text-transform: uppercase;
+  @media (orientation: portrait) {
+    left: 0;
+    font-size: 16vw;
+  }
+}
+
+.maintitle h4 {
+  margin: 0;
+  max-width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #f8f8f8;
+  font-size: 3vw;
+  font-weight: 100;
+  text-transform: uppercase;
+  @media (orientation: portrait) {
+    left: 0;
+    font-size: 8vw;
+  }
+}
+
+/*Main Title for all pages*/
