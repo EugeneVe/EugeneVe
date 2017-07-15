@@ -4,39 +4,15 @@
 <div class="overflow">
   <div class="animated fadeIn mainBlock">
     <div class="animated zoomIn maintitle homepage">
-      <h1>
-        <a href="#about">
-          <div id="clock"></div>
-        </a>
-      </h1>
-      <h4>
-        <div id="date"></div>
-      </h4>
-      <div id="day"></div>
+      <div class="clockSec">
+        <h1 id="clock"></h1>
+        <h4 id="sec"></h4>
+        <h4 id="date"></h4>
+        <span id="day"></span>
+      </div>
     </div>
   </div>
 </div>
 <div>
   <acme-footer></acme-footer>
 </div>
-<script>
-  var d = new Date();
-  var weekday = new Array(7);
-  weekday[0] = "Неділя";
-  weekday[1] = "Понеділок";
-  weekday[2] = "Вівторок";
-  weekday[3] = "Середа";
-  weekday[4] = "Четвер";
-  weekday[5] = "П'ятниця";
-  weekday[6] = "Субота";
-
-  var n = weekday[d.getDay()];
-  document.getElementById("day").innerHTML = n;
-
-  var now = moment();
-  var date = (now.format('HH:mm'));
-  document.getElementById("clock").innerHTML = date;
-  var date = (now.format('DD.MM.YYYY'));
-  document.getElementById("date").innerHTML = date;
-</script>
-

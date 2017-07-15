@@ -38,25 +38,32 @@ $(window).on('scroll', function () {
     .css({"-webkit-filter": "blur(" + pixs + "px)", "filter": "blur(" + pixs + "px)"})
 });
 
-/*function clock() {
- var time = new Date(),
- hours = time.getHours(),
- minutes = time.getMinutes(),
- seconds = time.getSeconds();
- var ampm = hours >= 12 ? 'pm' : 'am';
- hours = hours % 12;
- hours = hours ? hours : 12;
+/*BLUR CONTENT ON SCROLL*/
+$(window).on('scroll', function () {
+  var pixs = $(document).scrollTop();
+  pixs = pixs / 30;
+  $(".mainBlock, .aboutBlock, .portfolioBlock, .contactsBlock")
+    .css({"-webkit-filter": "blur(" + pixs + "px)", "filter": "blur(" + pixs + "px)"})
+});
 
- document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + " " + ampm;
- /!*+ ":" + harold(seconds)*!/
+/*TIME & DATE*/
+function update() {
+  $('#clock').html(moment().format('H:mm'));
+  $('#sec').html(moment().format(':ss'));
+  $('#date').html(moment().format('DD.MM.YYYY'));
 
- function harold(standIn) {
- if (standIn < 10) {
- standIn = '0' + standIn
- }
- return standIn;
- }
- }
- setInterval(clock, 1000);*/
+  var d = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "Неділя";
+  weekday[1] = "Понеділок";
+  weekday[2] = "Вівторок";
+  weekday[3] = "Середа";
+  weekday[4] = "Четвер";
+  weekday[5] = "П'ятниця";
+  weekday[6] = "Субота";
 
+  var n = weekday[d.getDay()];
+  document.getElementById("day").innerHTML = n;
+}
+setInterval(update, 500);
 
