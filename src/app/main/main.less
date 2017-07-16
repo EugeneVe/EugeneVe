@@ -1,26 +1,13 @@
-
+@txtColor: #f8f8f8;
 .homepage {
   margin: auto;
+  padding-bottom: 20px;
+  border-radius: 5px;
   width: 80vh;
+  background-color: rgba(0, 0, 0, 0.31);
   @media (orientation: portrait) {
     width: 40vh;
   }
-}
-
-#date {
-  cursor: default;
-  font-weight: 300;
-  font-size: 3vh;
-  @media (orientation: portrait) {
-    left: 0;
-    font-size: 6vw;
-  }
-}
-
-#day {
-  cursor: default;
-  color: #f8f8f8;
-  font-weight: 100;
 }
 
 #clock {
@@ -31,6 +18,36 @@
 #sec {
   display: inline;
   clear: none;
+}
+
+#date {
+  cursor: default;
+  font-weight: 300;
+  font-size: 3vh;
+  margin-bottom: 5px;
+  @media (orientation: portrait) {
+    left: 0;
+    font-size: 5vw;
+  }
+}
+
+#day {
+  cursor: default;
+  color: @txtColor;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 2vh;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic');
+#hello {
+  position: absolute;
+  width: 98%;
+  color: @txtColor;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 3vh;
 }
 
 /*

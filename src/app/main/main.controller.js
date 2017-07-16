@@ -31,13 +31,6 @@ export class MainController {
   }
 }
 
-$(window).on('scroll', function () {
-  var pixs = $(document).scrollTop();
-  pixs = pixs / 30;
-  $(".mainBlock, .aboutBlock, .portfolioBlock, .contactsBlock")
-    .css({"-webkit-filter": "blur(" + pixs + "px)", "filter": "blur(" + pixs + "px)"})
-});
-
 /*BLUR CONTENT ON SCROLL*/
 $(window).on('scroll', function () {
   var pixs = $(document).scrollTop();
@@ -52,6 +45,7 @@ function update() {
   $('#sec').html(moment().format(':ss'));
   $('#date').html(moment().format('DD.MM.YYYY'));
 
+
   var d = new Date();
   var weekday = new Array(7);
   weekday[0] = "Неділя";
@@ -64,6 +58,19 @@ function update() {
 
   var n = weekday[d.getDay()];
   document.getElementById("day").innerHTML = n;
+
+  var data = [
+      [0, 12, "Доброго ранку Eugene"],
+      [12, 18, "Доброго дня Eugene"],
+      [18, 24, "Доброго вечора Eugene"]
+    ],
+    hr = new Date().getHours();
+
+  for(var i=0; i<data.length;i++){
+    if(hr >= data[i][0] && hr <= data[i][1]){
+      $('#hello').html(data[i][2]);
+      break;
+    }
+  }
 }
 setInterval(update, 500);
-
