@@ -4,7 +4,7 @@ export function AboutDirective() {
     let directive = {
         restrict: 'E',
         templateUrl: 'app/components/about/about.html',
-        controller: AboutController,
+        controller: MainController,
         controllerAs: 'vm',
         bindToController: true
     };
@@ -12,7 +12,7 @@ export function AboutDirective() {
 }
 
 
-class AboutController {
+class MainController {
   constructor() {
         'ngInject';
     }

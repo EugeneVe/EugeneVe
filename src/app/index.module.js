@@ -8,6 +8,7 @@ import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { FooterDirective } from '../app/components/footer/footer.directive';
 import { LogoDirective } from '../app/components/logo/logo.directive';
 import { AboutDirective } from '../app/components/about/about.directive';
+import { ContactsDirective } from '../app/components/contacts/contacts.directive';
 import { PortfolioDirective } from '../app/components/portfolio/portfolio.directive';
 
 angular.module('EugeneVe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'ui.bootstrap', 'toastr'])
@@ -21,5 +22,6 @@ angular.module('EugeneVe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
   .directive('acmeFooter', FooterDirective)
   .directive('acmeLogo', LogoDirective)
   .directive('acmeAbout', AboutDirective)
+  .directive('acmeContacts', ContactsDirective)
   .directive('acmePortfolio', PortfolioDirective);
 

@@ -5,6 +5,7 @@
   border-radius: 5px;
   width: 80vh;
   background-color: rgba(0, 0, 0, 0.31);
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.2)));
   @media (orientation: portrait) {
     width: 40vh;
   }
@@ -48,7 +49,63 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 3vh;
+  top: 65px;
+  @media (orientation: portrait) {
+    width: 93%;
+  }
 }
+
+#citat {
+  position: absolute;
+  width: 98%;
+  bottom: 0;
+  color: @txtColor;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 3vh;
+}
+
+
+
+
+/* WEATHER */
+.weathTxt:hover {
+  padding-right: 22px;
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-filter: drop-shadow(2px 2px 3px #000);
+  filter: drop-shadow(2px 2px 3px #000);
+}
+
+.myWeather {
+  margin: 10px 0 10px 0;
+  width: 100%;
+  & p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    margin-bottom: 0;
+    color: @txtColor;
+  }
+}
+
+#weather {
+  display: none;
+}
+
+.weathTxt {
+  text-align: right;
+}
+
+p #celsiy {
+  float: right;
+  font-size: 10px;
+}
+
+
+
+
 
 /*
 .homepage a {

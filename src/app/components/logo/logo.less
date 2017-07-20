@@ -1,4 +1,4 @@
-@fillhover: rgba(122, 156, 193, .5);
+@fillhover: rgba(0, 0, 0, 0.8);
 @left_1_: rgba(252, 218, 67, .9);
 @right_1_: rgba(0, 0, 0, 0.1);
 .mainlogo,
@@ -10,11 +10,10 @@
 }
 
 .mainlogo svg {
-    height: 50px;
+  height: 50px;
 }
 
-.mainlogo:hover .right_1_
-{
+.mainlogo:hover .right_1_ {
   fill: @fillhover;
 }
 
@@ -24,4 +23,19 @@
 
 .left_1_ {
   fill: @left_1_;
+}
+
+.myName {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  float: right;
+  margin: 15px 0 15px 10px;
+}
+
+ul.nav li.dropdown:hover>ul.dropdown-menu {
+  display: block;
+}
+
+.navbar-toggle:hover {
+  background: transparent!important;
 }
