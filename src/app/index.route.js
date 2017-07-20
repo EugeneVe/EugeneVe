@@ -5,22 +5,22 @@ export function routerConfig($routeProvider) {
     .when('/', {
       templateUrl: 'app/main/main.html',
       controller: 'MainController',
-      controllerAs: 'main'
+      controllerAs: 'vm'
     })
     .when('/about', {
       templateUrl: 'app/components/about/about.html',
-      controller: 'AboutController',
-      controllerAs: 'about'
+      controller: 'MainController',
+      controllerAs: 'vm'
     })
     .when('/portfolio', {
       templateUrl: 'app/components/portfolio/portfolio.html',
-      controller: 'PortfolioController',
-      controllerAs: 'portfolio'
+      controller: 'MainController',
+      controllerAs: 'vm'
     })
     .when('/contacts', {
       templateUrl: 'app/components/contacts/contacts.html',
-      controller: 'contactsController',
-      controllerAs: 'contacts'
+      controller: 'MainController',
+      controllerAs: 'vm'
     })
     .otherwise({
       redirectTo: '/'

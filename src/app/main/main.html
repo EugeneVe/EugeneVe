@@ -2,18 +2,32 @@
   <acme-navbar></acme-navbar>
 </div>
 <div class="overflow">
-  <div class="animated fadeIn mainBlock">
+  <div class="mainBlock animated bounceInDown">
     <h1 id="hello" class="animated zoomIn"></h1>
-    <div class="animated zoomIn maintitle homepage">
-      <div class="clockSec">
+    <div class="maintitle homepage animated zoomIn ">
+      <a target="_blank" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=Kharkiv%2C+Ukraine">
+        <div class="myWeather">
+          <div class="col-xs-6 weathIco">
+            <!--<div class="weathBg"><img id="" src="" alt=""></div>--></div>
+          <div class="col-xs-6 weathTxt">
+            <!--<p><span id="weather"></span></p>-->
+            <p><span id=""></span>Харкiв</p>
+            <p><span id="celsiy">℃</span></p>
+            <p><span id="temp"></span></p>
+            <!--<p><span id="wind"></span></p>-->
+          </div>
+        </div>
+      </a>
+      <div class="col-xs-12 clockSec">
         <h1 id="clock"></h1>
         <h4 id="sec"></h4>
         <h4 id="date"></h4>
         <span id="day"></span>
-        </div>
       </div>
     </div>
   </div>
+  <p id="citat" class="animated zoomInDown"></p>
+</div>
 </div>
 <div>
   <acme-footer></acme-footer>

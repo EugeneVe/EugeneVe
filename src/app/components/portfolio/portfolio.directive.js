@@ -4,14 +4,14 @@ export function PortfolioDirective() {
     let directive = {
         restrict: 'E',
         templateUrl: 'app/components/portfolio/portfolio.html',
-        controller: PortfolioController,
+        controller: MainController,
         controllerAs: 'vm',
         bindToController: true
     };
 
     return directive;
 }
-class PortfolioController {
+class MainController {
     constructor() {
         'ngInject';
     }

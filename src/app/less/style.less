@@ -1,15 +1,14 @@
-@mainBlockbg: url(http://webbgwall.unaux.com/randomwall.php) top center fixed;/*../../assets/images/background/1.jpg*/
-/*@aboutbg: url(../../assets/images/background/2.jpg) top center fixed;
+@mainBlockbg: url(../../assets/images/background/1.jpg) top center fixed; /*http://webbgwall.unaux.com/randomwall.php*/
+@aboutbg: url(../../assets/images/background/2.jpg) top center fixed;
 @portfolio: url(../../assets/images/background/3.jpg) top center fixed;
-@contacts: url(../../assets/images/background/4.jpg) top center fixed;*/
+@contacts: url(../../assets/images/background/4.jpg) top center fixed;
 @Blocsminheight: 100vh;
 @Blocsmaxheight: 100%;
 @paddingAllBlocks: 100px 15px 60px 15px;
 @bgSize: cover;
-@trasform: translate3d(0, 0, 0) scaleX(1);
 
 body {
-  background-color: #222222;
+  background-color: #000;
 }
 
 .overflow {
@@ -23,11 +22,14 @@ body {
   padding: @paddingAllBlocks;
   min-height: @Blocsminheight;
   max-height: @Blocsmaxheight;
-  -webkit-transform: @trasform;
-  -moz-transform: @trasform;
-  -ms-transform: @trasform;
-  -o-transform: @trasform;
-  transform: @trasform;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
 }
 
 .mainBlock {
@@ -36,17 +38,17 @@ body {
 }
 
 .aboutBlock {
-  background: @mainBlockbg;
+  background: @aboutbg;
   background-size: @bgSize;
 }
 
 .portfolioBlock {
-  background: @mainBlockbg;
+  background: @portfolio;
   background-size: @bgSize;
 }
 
 .contactsBlock {
-  background: @mainBlockbg;
+  background: @contacts;
   background-size: @bgSize;
 }
 
@@ -59,6 +61,8 @@ body {
   position: relative;
   top: 30vh;
   overflow: hidden;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1s;
 }
 
 .maintitle h1 {
@@ -91,3 +95,10 @@ body {
 }
 
 /*Main Title for all pages*/
+
+.PF, .CT, .AB {
+  -webkit-box-reflect: below -40px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.2)));
+  @media (orientation: portrait) {
+    -webkit-box-reflect: below -20px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.2)));
+  }
+}

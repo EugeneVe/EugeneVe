@@ -4,7 +4,7 @@ export function ContactsDirective() {
     let directive = {
         restrict: 'E',
         templateUrl: 'app/components/contacts/contacts.html',
-        controller: ContactsController,
+        controller: MainController,
         controllerAs: 'vm',
         bindToController: true
     };
@@ -12,7 +12,7 @@ export function ContactsDirective() {
     return directive;
 }
 
-class ContactsController {
+class MainController {
     constructor() {
         'ngInject';
     }
