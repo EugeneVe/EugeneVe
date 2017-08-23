@@ -1,15 +1,19 @@
-@hoverColor: #fff;
+@hoverColor: #000;
+@colorNavBar: #000;
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: @hoverColor;
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+  color: @colorNavBar;
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
   border-color: rgba(16, 16, 16, 0.22);
 }
 
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
   color: @hoverColor;
 }
 
@@ -35,7 +39,9 @@
   padding: 10px 15px 0 15px !important;
 }
 
-.navbar, .navbar-inverse, .navbar-header {
+.navbar,
+.navbar-inverse,
+.navbar-header {
   border-radius: 0;
   border: none;
   margin-bottom: 0;
@@ -44,11 +50,11 @@
 
 .nav li {
   display: inline-block;
-  color: white;
+  color: @colorNavBar;
 }
 
-.navbar-inverse .navbar-nav > li > a {
-  color: #ffffff;
+.navbar-inverse .navbar-nav>li>a {
+  color: @hoverColor;
   font-family: 'Lato', sans-serif;
   font-size: 1.7em;
   font-weight: 300;
@@ -56,10 +62,9 @@
 }
 
 .nav li a:hover {
-  background-color: #444444;
-  // transition: 0.2s all linear;
+  background-color: @hoverColor; // transition: 0.2s all linear;
   height: 100%;
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 1px @hoverColor;
 }
 
 .navbar-toggle {
@@ -68,7 +73,8 @@
   border: none;
 }
 
-.collapse, .navbar-collapse {
+.collapse,
+.navbar-collapse {
   margin: 0;
 }
 
@@ -101,4 +107,8 @@
 
 .navbar-toggle.collapsed span:nth-child(3) {
   opacity: 1;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: @colorNavBar;
 }

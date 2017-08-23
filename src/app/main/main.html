@@ -1,34 +1,60 @@
-<div>
-  <acme-navbar></acme-navbar>
-</div>
 <div class="overflow">
-  <div class="mainBlock animated bounceInDown">
-    <h1 id="hello" class="animated zoomIn"></h1>
-    <div class="maintitle homepage animated zoomIn ">
-      <a target="_blank" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=Kharkiv%2C+Ukraine">
+  <div class="mainBlock">
+    <h1 id="hello" class="animated zoomIn center"></h1>
+    <div class="verticalcenter">
+      <div class="maintitle homepage animated fadeIn">
         <div class="myWeather">
           <div class="col-xs-6 weathIco">
-            <!--<div class="weathBg"><img id="" src="" alt=""></div>--></div>
-          <div class="col-xs-6 weathTxt">
-            <!--<p><span id="weather"></span></p>-->
-            <p><span id=""></span>Харкiв</p>
-            <p><span id="celsiy">℃</span></p>
-            <p><span id="temp"></span></p>
-            <!--<p><span id="wind"></span></p>-->
+            <!--<div class="weathBg"><img id="" src="" alt=""></div>-->
+          </div>
+          <div class="col-xs-6 col-xs-6-align">
+            <a target="_blank" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=Kharkiv%2C+Ukraine">
+              <div class="weathTxt" onload="myImageFunction()">
+                <!--<p><span id="weather"></span></p>-->
+                <p><span id=""></span>Харкiв</p>
+                <p><span id="celsiy">℃</span></p>
+                <p><span id="temp"></span></p>
+                <!--<p><span id="wind"></span></p>-->
+              </div>
+            </a>
           </div>
         </div>
-      </a>
-      <div class="col-xs-12 clockSec">
-        <h1 id="clock"></h1>
-        <h4 id="sec"></h4>
-        <h4 id="date"></h4>
-        <span id="day"></span>
+        <div class="col-xs-12 clockSec">
+          <h1 id="clock"></h1>
+          <h4 id="sec"></h4>
+          <h4 id="date"></h4>
+          <p id="day"></p>
+        </div>
       </div>
     </div>
   </div>
   <p id="citat" class="animated zoomInDown"></p>
 </div>
-</div>
-<div>
-  <acme-footer></acme-footer>
-</div>
+<script>
+/*WEATHER*/
+$(function weather() {
+  $.ajax({
+    url: "http://api.wunderground.com/api/e1550cbb9034cf8a/geolookup/conditions/q/UA/Kharkiv.json",
+    dataType: "jsonp",
+    success: function(parsed_json) {
+      /*var weather = parsed_json['location']['city'];*/
+      var temp = parsed_json['current_observation']['temp_c'];
+      /*document.getElementById("weather").innerHTML = weather;*/
+      document.getElementById("temp").innerHTML = temp;
+    }
+  });
+});
+/*CITATES*/
+$(function citates() {
+  var r_text = new Array([]);
+  r_text[0] = "Пытайся делать всё, что кажется невозможным. Жизнь слишком коротка, можешь потом пожалеть.";
+  r_text[1] = "Если мы не будем строить свое будущее, нам придется его терпеть";
+  r_text[2] = "Успех – это когда ты девять раз упал, но десять раз поднялся.";
+  r_text[3] = "Лучший способ предсказать своё будущее – стать его создателем.";
+  r_text[4] = "Каждый день надо делать дело, которое тебя пугает.";
+  r_text[5] = "Чтобы победить самые тяжелые страдания, есть два средства: это опиум - и работа.";
+  r_text[6] = "Работа избавляет нас от трех великих зол: скуки, порока, нужды.";
+  var i = Math.round(6 * Math.random());
+  document.getElementById('citat').innerHTML = (r_text[i]);
+});
+</script>
