@@ -84,23 +84,23 @@
 }
 
 #citat {
+  background: rgba(255, 255, 255, 0.0);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.4));
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.4));
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.4));
   position: absolute;
-  width: 98%;
+  width: 100%;
   bottom: 0;
   color: @txtColor;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 3vh;
+  margin: 0px;
+  padding: 15px 0 10px 0;
 }
 
-#citat:before {
-  color: @txtColor;
-}
-
-#citat:after {
-  color: black;
-}
 
 
 /* WEATHER */
@@ -134,7 +134,7 @@
 
 .weathTxt {
   text-align: right;
-  color:@txtColor!important;
+  color: @txtColor!important;
 }
 
 p #celsiy {
