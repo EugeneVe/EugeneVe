@@ -1,5 +1,5 @@
-@hoverColor: #000;
-@colorNavBar: #000;
+@hoverColor: #262626;
+@colorNavBar: #262626;
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 .navbar-inverse .navbar-nav>li>a:hover,
@@ -19,20 +19,31 @@
 
 .navbar-nav {
   float: right;
+  @media only screen (orientation: portrait) {
+    width: 100% !important;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: relative;
+    text-align: center;
+  }
+  @media only screen and (max-device-width: 736px) {
+    width: 100% !important;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: relative;
+    text-align: center;
+  }
 }
 
 .navbar {
   background: rgba(0, 0, 0, 0.4);
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0));
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0));
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0));
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0));
+  background: -webkit-linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
+  background: -o-linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
+  background: -moz-linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
+  background: linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
   margin-bottom: 0;
-}
-
-.navbar-header:before {
-  content: "";
-  filter: blur(60px);
 }
 
 .navbar-brand {
@@ -56,15 +67,40 @@
 .navbar-inverse .navbar-nav>li>a {
   color: @hoverColor;
   font-family: 'Lato', sans-serif;
-  font-size: 1.7em;
+  font-size: 14pt;
   font-weight: 300;
-  padding: 24px 25px 21px 25px;
+  padding: 24px 10px 21px 10px;
 }
 
-.nav li a:hover {
-  background-color: @hoverColor; // transition: 0.2s all linear;
-  height: 100%;
-  border-bottom: solid 1px @hoverColor;
+.nav li a:hover:after {
+  content: "";
+  background: @hoverColor;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  animation: stretchline 700ms forwards;
+  overflow: hidden;
+}
+
+@keyframes stretchline {
+  0% {
+    opacity: 0;
+    transform: scale(0.1) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
 }
 
 .navbar-toggle {
@@ -110,5 +146,18 @@
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-    background-color: @colorNavBar;
+  background-color: @colorNavBar;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  @media only screen and (max-device-width: 736px) {
+    left: 0px;
+    position: absolute;
+    width: 100% !important;
+    right: 0px;
+    margin: 0;
+    padding: 0;
+    background:rgba(255, 255, 255, 0.6);
+  }
 }
