@@ -1,41 +1,59 @@
-@mainBlockbg: url(../../assets/images/background/3.jpg) top center fixed;
-
-/* linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), */
-
-
-/*http://webbgwall.unaux.com/randomwall.php*/
-
-
-/* @aboutbg: url(../../assets/images/background/2.jpg) top center fixed;
-@portfolio: url(../../assets/images/background/3.jpg) top center fixed;
-@contacts: url(../../assets/images/background/4.jpg) top center fixed; */
+:root {
+  --mainblockbg: url(../../assets/images/background/1.jpg) top center fixed;
+}
 
 @Blocsminheight: 100vh;
-@Blocsmaxheight: 100%;
+@Blocsmaxheight: 100vh;
 @paddingAllBlocks: 100px 15px 60px 15px;
 @bgSize: cover;
 @scales: 1.01;
 @blur: 8px;
 @hoverColor: #fff;
-@logotxtColor: #000;
+@logotxtColor: @hoverColor;
 @logoLockColor: #f1002b;
 @navbarcolor: rgba(0, 0, 0, 0.8);
 @navbar-inverse-link-color: #d2d1d1;
 @icon-font-path: '../../bootstrap/fonts/';
 
-body {
-  background-color: #000;
+@media (max-width: 100vw) and (orientation: landscape) {
+  .container {
+    min-width: 95vw!important;
+  }
 }
 
-.overflow {
-  overflow: hidden;
+
+html,
+body {
+  background-color: rgba(0,0,0,1);
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body.thin::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #36454d;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(100, 100, 100, 0.9);
 }
 
 .mainBlock,
-.aboutBlock,
 .portfolioBlock,
+.aboutBlock,
 .contactsBlock {
-  background: @mainBlockbg;
+  background: var(--mainblockbg);
   background-size: @bgSize;
   padding: @paddingAllBlocks;
   min-height: @Blocsminheight;
@@ -48,6 +66,7 @@ body {
   perspective: 1000;
   transform: translate3d(0, 0, 0);
   transform: translateZ(0);
+  overflow: hidden;
 }
 
 .mainBlock::after {
@@ -65,11 +84,17 @@ body {
   overflow: hidden;
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 1s;
+  cursor: pointer;
+}
+
+.citat {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 3s;
 }
 
 .maintitle:before {
   content: '';
-  background: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 250, .3)), @mainBlockbg;
+  background: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 250, .3)), var(--mainblockbg);
   background-size: @bgSize;
   background-attachment: fixed;
   overflow: hidden;
@@ -152,15 +177,19 @@ body {
 .PFB,
 .ABB,
 .CTB {
-  position:relative;
-  top:30px;
+  position: relative;
+  top: 30px;
   text-align: center;
   margin: auto;
   padding-bottom: 60px;
   width: 50vw;
-  -webkit-animation-delay: 1500ms;
+  -webkit-animation-delay: 500ms;
   overflow: hidden;
   @media (orientation: portrait) {
     width: 100vw;
   }
+}
+
+.randwal {
+  font-size: 8pt;
 }

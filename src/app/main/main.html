@@ -2,8 +2,11 @@
   <div class="mainBlock">
     <h1 id="hello" class="animated zoomIn center"></h1>
     <div class="verticalcenter">
-      <div class="maintitle homepage animated fadeIn">
+      <div class="maintitle homepage animated fadeIn" onclick="changeWall()">
         <div class="myWeather">
+          <div class="col-xs-12 randwal" popover-animation="true" uib-popover="Click on glass panel to change wallpaper randomly" popover-append-to-body="true" popover-trigger="mouseenter">
+            <p>click to random wallpaper</p>
+          </div>
           <div class="col-xs-6 weathIco">
             <!--<div class="weathBg"><img id="" src="" alt=""></div>-->
           </div>
@@ -27,10 +30,30 @@
         </div>
       </div>
     </div>
+    <div class="citat animated fadeIn">
+      <p id="citat" class="animated fadeIn"></p>
+    </div>
   </div>
-  <p id="citat" class="animated bounceInUp"></p>
 </div>
 <script>
+/*WALLPAPER RANDOMER*/
+var walls = [
+  "url(../../assets/images/background/1.jpg) top center fixed",
+  "url(../../assets/images/background/2.jpg) top center fixed",
+  "url(../../assets/images/background/3.jpg) top center fixed",
+  "url(../../assets/images/background/4.jpg) top center fixed",
+];
+
+function getWall() {
+  return walls[
+    Math.floor(Math.random() * walls.length)
+  ];
+}
+// Set the color from array
+function changeWall() {
+  document.documentElement.style.setProperty('--mainblockbg', getWall());
+}
+
 /*WEATHER*/
 $(function weather() {
   $.ajax({
