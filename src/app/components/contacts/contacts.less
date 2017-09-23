@@ -1,0 +1,47 @@
+.links {
+  margin: 50px 0 0 0;
+}
+
+.facebook {
+  -webkit-animation-delay: 900ms;
+}
+
+.twitter {
+  -webkit-animation-delay: 1200ms;
+}
+
+.google {
+  -webkit-animation-delay: 1500ms;
+}
+
+.instagram {
+  -webkit-animation-delay: 1800ms;
+}
+
+.toggle-section h1,
+.toggle-section .main-text {
+  -webkit-animation-delay: 900ms;
+  -moz-transition: height 400ms;
+  -o-transition: height 400ms;
+  -webkit-transition: height 400ms;
+  transition: height 400ms;
+  overflow: hidden;
+  height: 1.2em;
+  font-size: 5vw;
+}
+
+.toggle-section .main-text {
+  height: 0;
+}
+
+.toggle-section:hover h1,
+.toggle-section:focus h1 {
+  height: 0;
+  cursor: pointer;
+}
+
+.toggle-section:hover .main-text,
+.toggle-section:focus .main-text {
+  height: 1.2em;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
