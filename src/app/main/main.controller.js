@@ -13,13 +13,13 @@ $(document).ready(function($) {
     $('#date').html(moment().format('DD.MM.YYYY'));
     var d = new Date();
     var weekday = new Array(7);
-    weekday[0] = "Неділя";
-    weekday[1] = "Понеділок";
-    weekday[2] = "Вівторок";
-    weekday[3] = "Середа";
-    weekday[4] = "Четвер";
-    weekday[5] = "П'ятниця";
-    weekday[6] = "Субота";
+    weekday[0] = "сьогодні Неділя";
+    weekday[1] = "сьогодні Понеділок";
+    weekday[2] = "сьогодні Вівторок";
+    weekday[3] = "сьогодні Середа";
+    weekday[4] = "сьогодні Четвер";
+    weekday[5] = "сьогодні П'ятниця";
+    weekday[6] = "сьогодні Субота";
     var n = weekday[d.getDay()];
     document.getElementById("day").innerHTML = n;
     var data = [
@@ -45,5 +45,6 @@ $(window).on('scroll', function() {
   pixs = pixs / 10;
   $(".mainBlock, .aboutBlock, .portfolioBlock, .contactsBlock")
     /*.css({ "-webkit-filter": "blur(" + pixs + "px)", "filter": "blur(" + pixs + "px)" })*/
+
     .css('opacity', function() { return 1 - ($(window).scrollTop() / $(this).outerHeight() * 2); });
 });

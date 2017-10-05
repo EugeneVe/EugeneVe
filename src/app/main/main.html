@@ -1,11 +1,13 @@
 <div class="overflow">
   <div class="mainBlock">
-    <h1 id="hello" class="animated zoomIn center"></h1>
+    <div class="googleSearch animated flipInX">
+      <input id="searchTxt" placeholder="google search">
+    </div>
     <div class="verticalcenter">
-      <div class="maintitle homepage animated fadeIn" onclick="changeWall()">
+      <div id="move" class="maintitle homepage animated fadeIn">
         <div class="myWeather">
-          <div class="col-xs-12 randwal" popover-animation="true" uib-popover="Click on glass panel to change wallpaper randomly" popover-append-to-body="true" popover-trigger="mouseenter">
-            <p>click to random wallpaper</p>
+          <div class="col-xs-12 randwal">
+            <p popover-animation="true" uib-popover="Click here change wallpaper randomly" popover-append-to-body="true" popover-trigger="mouseenter" onclick="changeWall()">click to random wallpaper</p>
           </div>
           <div class="col-xs-6 weathIco">
             <!--<div class="weathBg"><img id="" src="" alt=""></div>-->
@@ -25,8 +27,9 @@
         <div class="col-xs-12 clockSec">
           <h1 id="clock"></h1>
           <h4 id="sec"></h4>
-          <h4 id="date"></h4>
+          <h1 id="hello" class="animated zoomIn center"></h1>
           <p id="day"></p>
+          <h4 id="date"></h4>
         </div>
       </div>
     </div>
@@ -36,6 +39,20 @@
   </div>
 </div>
 <script>
+//creates a listener for when you press a key
+window.onkeyup = keyup;
+//creates a global Javascript variable
+var inputTextValue;
+function keyup(e) {
+  //setting your input text to the global Javascript Variable for every key press
+  inputTextValue = e.target.value;
+  $('#searchValue').text("https://duckduckgo.com/?q=" + inputTextValue);
+  //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
+  if (e.keyCode == 13) {
+    window.open('https://www.google.com.ua/search?q=' + inputTextValue, '_blank');
+  }
+}
+
 /*WALLPAPER RANDOMER*/
 var walls = [
   "url(../../assets/images/background/1.jpg) top center fixed",
@@ -49,7 +66,7 @@ function getWall() {
     Math.floor(Math.random() * walls.length)
   ];
 }
-// Set the color from array
+// Set the WALLPAPER from array
 function changeWall() {
   document.documentElement.style.setProperty('--mainblockbg', getWall());
 }
@@ -80,4 +97,5 @@ $(function citates() {
   var i = Math.round(6 * Math.random());
   document.getElementById('citat').innerHTML = (r_text[i]);
 });
+
 </script>
