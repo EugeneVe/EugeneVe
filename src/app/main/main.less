@@ -4,7 +4,6 @@
   margin: auto;
   padding-bottom: 20px;
   width: 40vw;
-  -webkit-animation-delay: 1500ms;
   overflow: hidden;
   @media (orientation: portrait) {
     width: 100vw;
@@ -107,6 +106,8 @@
 }
 
 
+
+
 /* WEATHER */
 
 .weathTxt {
@@ -170,13 +171,30 @@ p #celsiy {
 
 .popover {
   width: 12vw;
-  background-color: rgba(255, 255, 255, 0.5);
+  text-align:center;
+  border-radius: 0;
+  border: 0 transparent;
+  background-color: rgba(226, 226, 226, 0.7);
+  @media (orientation:portrait) {
+    width: 40vw;
+  }
 }
 
 .popover.top>.arrow:after {
-  border-top-color: rgba(255, 255, 255, 0.7);
+  border-top-color: rgba(226, 226, 226, 0.8);
 }
 
+.searchWrap {
+  margin: auto;
+  padding-bottom: 20px;
+  width: 40vw;
+  height: 50px;
+  -webkit-animation-delay: 1500ms;
+  overflow: hidden;
+  @media (orientation: portrait) {
+    width: 100vw;
+  }
+}
 
 .googleSearch {
   left: 0;
@@ -186,24 +204,26 @@ p #celsiy {
   margin: 0 auto;
   text-align: center;
   top: 10vh;
-  -webkit-animation-delay: 1000ms;
+  -webkit-animation-delay: 200ms;
 }
 
 #searchTxt {
-  padding: 15px 10px 5px 10px;
+  width: 40vw;
+  overflow: hidden;
+  padding: 5px 10px 5px 10px;
   font-family: 'Open Sans', sans-serif;
   color: @txtColor;
   font-size: 2.5vh;
   font-weight: 100;
   text-transform: uppercase;
-  background: linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, .1), rgba(255, 255, 250, .3));
+  background: rgba(255, 255, 250, .0);
   border: 0px solid #fff;
   border-bottom: 0px solid rgba(255, 255, 255, .5);
-  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   &:focus {
     outline: 0;
+  }
+  @media (orientation: portrait) {
+    margin: auto;
   }
 }
 
