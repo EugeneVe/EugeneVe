@@ -1,32 +1,31 @@
 <div class="overflow">
   <div class="mainBlock">
-    <div class="googleSearch animated bounceInDown">
-      <!-- <input id="searchTxt" placeholder="google search"> -->
-      <div class="maintitle searchWrap">
-        <div class="verticalcenter">
-          <input id="searchTxt" placeholder="google search">
-        </div>
-      </div>
+    <!--     <div class="googleSearch animated bounceInDown">
+  <input id="searchTxt" placeholder="google search">
+  <div class="maintitle searchWrap">
+    <div class="verticalcenter">
+      <input id="searchTxt" placeholder="google search">
     </div>
+  </div>
+</div> -->
     <div class="verticalcenter">
       <div class="maintitle homepage animated bounceInDown">
         <div class="myWeather">
+          <input id="searchTxt" placeholder="google search">
+          <a target="_blank" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=Kharkiv%2C+Ukraine">
+            <div class="weathTxt" onload="myImageFunction()">
+              <!--<p><span id="weather"></span></p>-->
+              <p><span id=""></span>Харкiв</p>
+              <p><span id="celsiy">℃</span></p>
+              <p><span id="temp"></span></p>
+              <!--<p><span id="wind"></span></p>-->
+            </div>
+          </a>
           <div class="col-xs-12 randwal">
             <p popover-animation="true" uib-popover="Click here change wallpaper randomly" popover-append-to-body="true" popover-trigger="mouseenter" onclick="changeWall()">click to random wallpaper</p>
           </div>
           <div class="col-xs-6 weathIco">
             <!--<div class="weathBg"><img id="" src="" alt=""></div>-->
-          </div>
-          <div class="col-xs-6 col-xs-6-align">
-            <a target="_blank" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=Kharkiv%2C+Ukraine">
-              <div class="weathTxt" onload="myImageFunction()">
-                <!--<p><span id="weather"></span></p>-->
-                <p><span id=""></span>Харкiв</p>
-                <p><span id="celsiy">℃</span></p>
-                <p><span id="temp"></span></p>
-                <!--<p><span id="wind"></span></p>-->
-              </div>
-            </a>
           </div>
         </div>
         <div class="col-xs-12 clockSec">
