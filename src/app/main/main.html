@@ -1,18 +1,10 @@
 <div class="overflow">
   <div class="mainBlock">
-    <!--     <div class="googleSearch animated bounceInDown">
-  <input id="searchTxt" placeholder="google search">
-  <div class="maintitle searchWrap">
-    <div class="verticalcenter">
-      <input id="searchTxt" placeholder="google search">
-    </div>
-  </div>
-</div> -->
     <div class="verticalcenter">
       <div class="maintitle homepage animated bounceInDown">
         <div class="myWeather">
           <input id="searchTxt" placeholder="google search">
-          <a target="_blank" href="https://www.wunderground.com/cgi-bin/findweather/getForecast?query=Kharkiv%2C+Ukraine">
+          <a target="_blank" href="//weather.com/uk-UA/weather/today/l/UPXX0014:1:UP">
             <div class="weathTxt" onload="myImageFunction()">
               <!--<p><span id="weather"></span></p>-->
               <p><span id=""></span>Харкiв</p>
@@ -21,8 +13,8 @@
               <!--<p><span id="wind"></span></p>-->
             </div>
           </a>
-          <div class="col-xs-12 randwal">
-            <p popover-animation="true" uib-popover="Click here change wallpaper randomly" popover-append-to-body="true" popover-trigger="mouseenter" onclick="changeWall()">click to random wallpaper</p>
+          <div class="randwal">
+            <p popover-animation="true" uib-popover="Click here change wallpaper randomly" popover-append-to-body="true" popover-trigger="mouseenter" onclick="changeWall()"><i class="fa fa-refresh" aria-hidden="true"></i></p>
           </div>
           <div class="col-xs-6 weathIco">
             <!--<div class="weathBg"><img id="" src="" alt=""></div>-->
@@ -61,9 +53,12 @@ function keyup(e) {
 /*WALLPAPER RANDOMER*/
 var walls = [
   "url(../../assets/images/background/1.jpg) top center fixed",
-  "url(../../assets/images/background/2.jpg) top center fixed",
+/*  "url(../../assets/images/background/2.jpg) top center fixed",
   "url(../../assets/images/background/3.jpg) top center fixed",
-  "url(../../assets/images/background/4.jpg) top center fixed",
+  "url(../../assets/images/background/4.jpg) top center fixed",*/
+  "url(https://source.unsplash.com/collection/888747/1920x1080) top center fixed",
+  "url(https://source.unsplash.com/collection/888747/1921x1081) top center fixed",
+  "url(https://source.unsplash.com/collection/888747/1922x1082) top center fixed",
 ];
 
 function getWall() {
