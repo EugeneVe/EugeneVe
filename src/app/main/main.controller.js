@@ -8,8 +8,9 @@ export class MainController {
 /*TIME DATE & WEATHER*/
 $(document).ready(function($) {
   function update() {
-    $('#clock').html(moment().format('H:mm'));
-    $('#sec').html(moment().format(':ss'));
+    $('#hour').html(moment().format('H'));
+    $('#min').html(moment().format('mm'));
+    $('#sec').html(moment().format('ss'));
     $('#date').html(moment().format('DD.MM.YYYY'));
     var d = new Date();
     var weekday = new Array(7);
@@ -37,7 +38,7 @@ $(document).ready(function($) {
       }
     }
   }
-  setInterval(update, 500);
+  setInterval(update, 1000);
 });
 /*BLUR CONTENT ON SCROLL & FADE IN*/
 /*$(window).on('scroll', function() {

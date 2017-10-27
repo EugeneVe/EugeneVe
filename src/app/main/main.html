@@ -4,7 +4,7 @@
       <div class="maintitle homepage animated bounceInDown">
         <div class="myWeather">
           <input id="searchTxt" placeholder="google search">
-          <a target="_blank" href="//weather.com/uk-UA/weather/today/l/UPXX0014:1:UP">
+          <a target="_blank" href="//www.wunderground.com/weather/ua/kharkiv">
             <div class="weathTxt" onload="myImageFunction()">
               <!--<p><span id="weather"></span></p>-->
               <p><span id=""></span>Харкiв</p>
@@ -14,19 +14,24 @@
             </div>
           </a>
           <div class="randwal">
-            <p popover-animation="true" uib-popover="Click here change wallpaper randomly" popover-append-to-body="true" popover-trigger="mouseenter" onclick="changeWall()"><i class="fa fa-refresh" aria-hidden="true"></i></p>
+            <p popover-animation="true" uib-popover="Click here to change background randomly" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" onclick="changeWall()"><i class="fa fa-refresh" aria-hidden="true"></i></p>
           </div>
           <div class="col-xs-6 weathIco">
             <!--<div class="weathBg"><img id="" src="" alt=""></div>-->
           </div>
         </div>
         <div class="col-xs-12 clockSec">
-          <h1 id="clock"></h1>
-          <h4 id="sec"></h4>
+          <ul>
+            <li><h1 id="hour"></h1></li>
+            <li><h1 id="dots">:</h1></li>
+            <li><h1 id="min"></h1></li>
+            <li><h4 id="sec"></h4></li>
+          </ul>
           <h1 id="hello"></h1>
           <p id="day"></p>
           <h4 id="date"></h4>
         </div>
+        </li>
       </div>
     </div>
     <div class="citat animated fadeIn">
@@ -52,13 +57,9 @@ function keyup(e) {
 
 /*WALLPAPER RANDOMER*/
 var walls = [
-  "url(../../assets/images/background/1.jpg) top center fixed",
-/*  "url(../../assets/images/background/2.jpg) top center fixed",
-  "url(../../assets/images/background/3.jpg) top center fixed",
-  "url(../../assets/images/background/4.jpg) top center fixed",*/
   "url(https://source.unsplash.com/collection/888747/1920x1080) top center fixed",
   "url(https://source.unsplash.com/collection/888747/1921x1081) top center fixed",
-  "url(https://source.unsplash.com/collection/888747/1922x1082) top center fixed",
+  "url(https://source.unsplash.com/collection/888747/1922x1082) top center fixed"
 ];
 
 function getWall() {
