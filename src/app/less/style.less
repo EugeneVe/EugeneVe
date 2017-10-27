@@ -1,15 +1,16 @@
 :root {
-  --mainblockbg: url(https://source.unsplash.com/collection/888747/1920x1080) top center fixed;/* ../../assets/images/background/1.jpg */
+  --mainblockbg: url(//source.unsplash.com/collection/888747/1920x1080) top center fixed;
+  /* ../../assets/images/background/1.jpg https://source.unsplash.com/collection/888747/1920x1080*/
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100|Open+Sans:300&subset=cyrillic');
+@import url('//fonts.googleapis.com/css?family=Work+Sans:100|Open+Sans:300&subset=cyrillic');
 
 @Blocsminheight: 100vh;
 @Blocsmaxheight: 100vh;
 @paddingAllBlocks: 100px 15px 60px 15px;
 @bgSize: cover;
-@scales: 1.01;
-@blur: 25px;
+@scales: 1.2;
+@blur: 20px;
 @txtColor: #1d1d1d;
 @placeholderColor: #595959;
 @hoverColor: #fff;
@@ -27,7 +28,9 @@
 
 html,
 body {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #000;
+  background: var(--mainblockbg);
+  background-size: @bgSize;
 }
 
 body::-webkit-scrollbar {
@@ -56,8 +59,6 @@ body.thin::-webkit-scrollbar {
 .portfolioBlock,
 .aboutBlock,
 .contactsBlock {
-  background: var(--mainblockbg);
-  background-size: @bgSize;
   padding: @paddingAllBlocks;
   min-height: @Blocsminheight;
   max-height: @Blocsmaxheight;
@@ -72,9 +73,6 @@ body.thin::-webkit-scrollbar {
   overflow: hidden;
 }
 
-.mainBlock::after {
-  background-color: #000;
-}
 
 /*Main Title for all pages*/
 
@@ -98,10 +96,7 @@ body.thin::-webkit-scrollbar {
   overflow: hidden;
   position: absolute;
   height: auto;
-  top: -50px;
-  left: -50px;
-  right: -50px;
-  bottom: -50px;
+  top: 0;  left: 0;  right: 0;  bottom: 0;
   filter: blur(@blur);
   -o-filter: blur(@blur);
   -ms-filter: blur(@blur);
@@ -121,10 +116,12 @@ body.thin::-webkit-scrollbar {
   cursor: default;
   margin: 0;
   max-width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   color: @txtColor;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
   font-size: 8vw;
-  font-weight: 100;
   text-transform: uppercase;
   @media (orientation: portrait) {
     left: 0;
@@ -135,10 +132,9 @@ body.thin::-webkit-scrollbar {
 .maintitle h4 {
   margin: 0;
   max-width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   color: @txtColor;
   font-size: 3vw;
-  font-weight: 100;
   text-transform: uppercase;
   @media (orientation: portrait) {
     left: 0;

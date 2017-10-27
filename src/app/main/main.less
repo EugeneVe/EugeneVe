@@ -37,47 +37,31 @@
   }
 }
 
-#clock {
-  display: inline;
+.clockSec ul li {
+  list-style-type: none;
+  display: inline-block;
   clear: none;
+  opacity: 100%;
+}
+
+@animationSettings:dots 1s step-start 0s infinite;
+
+#dots {
+  -webkit-animation: @animationSettings;
+  -moz-animation: @animationSettings;
+  -o-animation:  @animationSettings;
+  animation:  @animationSettings;
+}
+
+@keyframes dots {
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes dots {
+  50% { opacity: 0.0; }
 }
 
 #sec {
-  display: inline;
-  clear: none;
-}
-
-#date {
-  cursor: default;
-  font-weight: 300;
-  font-size: 3vh;
-  margin-bottom: 5px;
-  @media (orientation: portrait) {
-    left: 0;
-    font-size: 5vw;
-  }
-}
-
-#day {
-  cursor: default;
-  color: @txtColor;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 100;
-  font-size: 3vh;
-  margin: 0 5px 0 0;
-}
-
-.clockSec #day,
-.clockSec #date {
-  display: inline;
-  vertical-align: middle;
-}
-
-.clockSec {
-  padding: 15px 0 0 0;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
-    padding:0 0 15px 0;
-  }
+  width: 5vw;
 }
 
 #hello {
@@ -93,6 +77,40 @@
   }
   @media (orientation: portrait) {
     margin: 10px 0 10px 0;
+  }
+}
+
+#day {
+  cursor: default;
+  color: @txtColor;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 3vh;
+  margin: 0 5px 0 0;
+}
+
+#date {
+  cursor: default;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3vh;
+  margin-bottom: 5px;
+  @media (orientation: portrait) {
+    left: 0;
+    font-size: 5vw;
+  }
+}
+
+.clockSec #day,
+.clockSec #date {
+  display: inline;
+  vertical-align: middle;
+}
+
+.clockSec {
+  padding: 15px 0 0 0;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+    padding:0 0 15px 0;
   }
 }
 
@@ -116,7 +134,6 @@
 }
 
 /* WEATHER */
-
 .weathTxt {
   position: absolute;
   top: 10%;
@@ -188,7 +205,7 @@ p #celsiy {
 }
 
 .popover.top>.arrow:after {
-  border-top-color: #f2f2f2;
+  border-top-color: #e8e8e8;
 }
 
 .searchWrap {
