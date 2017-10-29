@@ -4,28 +4,28 @@
       <div class="maintitle homepage animated bounceInDown">
         <div class="myWeather">
           <input id="searchTxt" placeholder="google search">
-          <a target="_blank" href="//www.wunderground.com/weather/ua/kharkiv">
+          <!-- <a target="_blank" href="//www.wunderground.com/weather/ua/kharkiv">
             <div class="weathTxt" onload="myImageFunction()">
-              <!--<p><span id="weather"></span></p>-->
+              <p><span id="weather"></span></p>
               <p><span id=""></span>Харкiв</p>
               <p><span id="celsiy">℃</span></p>
               <p><span id="temp"></span></p>
-              <!--<p><span id="wind"></span></p>-->
+              <p><span id="wind"></span></p>
             </div>
-          </a>
+          </a> -->
           <div class="randwal">
             <p popover-animation="true" uib-popover="Click here to change background randomly" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" onclick="changeWall()"><i class="fa fa-refresh" aria-hidden="true"></i></p>
           </div>
-          <div class="col-xs-6 weathIco">
-            <!--<div class="weathBg"><img id="" src="" alt=""></div>-->
-          </div>
+                    <!-- <div class="col-xs-6 weathIco">
+                      <div class="weathBg"><img id="" src="" alt=""></div>
+                    </div> -->
         </div>
         <div class="col-xs-12 clockSec">
           <ul>
             <li><h1 id="hour"></h1></li>
             <li><h1 id="dots">:</h1></li>
             <li><h1 id="min"></h1></li>
-            <li><h4 id="sec"></h4></li>
+            <!-- <li><h4 id="sec"></h4></li> -->
           </ul>
           <h1 id="hello"></h1>
           <p id="day"></p>
@@ -39,23 +39,20 @@
     </div>
   </div>
 </div>
-<script>
-//creates a listener for when you press a key
-window.onkeyup = keyup;
-//creates a global Javascript variable
-var inputTextValue;
+<script async type="text/javascript">
+/* SEARCH */
+window.onkeyup = keyup; //creates a listener for when you press a key
+var inputTextValue; //creates a global Javascript variable
 
 function keyup(e) {
-  //setting your input text to the global Javascript Variable for every key press
-  inputTextValue = e.target.value;
+  inputTextValue = e.target.value; //setting your input text to the global Javascript Variable for every key press
   $('#searchValue').text("https://duckduckgo.com/?q=" + inputTextValue);
-  //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
   if (e.keyCode == 13) {
-    window.open('https://www.google.com.ua/search?q=' + inputTextValue, '_blank');
+    window.open('https://www.google.com.ua/search?q=' + inputTextValue, '_blank'); //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
   }
 }
 
-/*WALLPAPER RANDOMER*/
+/* WALLPAPER RANDOMER */
 var walls = [
   "url(https://source.unsplash.com/collection/888747/1920x1080) top center fixed",
   "url(https://source.unsplash.com/collection/888747/1921x1081) top center fixed",
@@ -64,28 +61,15 @@ var walls = [
 
 function getWall() {
   return walls[
-    Math.floor(Math.random() * walls.length)
+    Math.floor(Math.random() * walls.length) // randomizer
   ];
 }
-// Set the WALLPAPER from array
+
 function changeWall() {
-  document.documentElement.style.setProperty('--mainblockbg', getWall());
+  document.documentElement.style.setProperty('--mainblockbg', getWall()); // Set the WALLPAPER from array
 }
 
-/*WEATHER*/
-$(function weather() {
-  $.ajax({
-    url: "http://api.wunderground.com/api/e1550cbb9034cf8a/geolookup/conditions/q/UA/Kharkiv.json",
-    dataType: "jsonp",
-    success: function(parsed_json) {
-      /*var weather = parsed_json['location']['city'];*/
-      var temp = parsed_json['current_observation']['temp_c'];
-      /*document.getElementById("weather").innerHTML = weather;*/
-      document.getElementById("temp").innerHTML = temp;
-    }
-  });
-});
-/*CITATES*/
+/* CITATES */
 $(function citates() {
   var r_text = new Array([]);
   r_text[0] = "Пытайся делать всё, что кажется невозможным. Жизнь слишком коротка, можешь потом пожалеть.";
@@ -99,4 +83,18 @@ $(function citates() {
   document.getElementById('citat').innerHTML = (r_text[i]);
 });
 
+/* WEATHER OLD */
+/*
+$(function weather() {
+  $.ajax({
+    url: "http://api.wunderground.com/api/e1550cbb9034cf8a/geolookup/conditions/q/UA/Kharkiv.json",
+    dataType: "jsonp",
+    success: function(parsed_json) {
+      var weather = parsed_json['location']['city'];
+      var temp = parsed_json['current_observation']['temp_c'];
+      document.getElementById("weather").innerHTML = weather;
+      document.getElementById("temp").innerHTML = temp;
+    }
+  });
+});*/
 </script>

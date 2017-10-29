@@ -21,43 +21,50 @@
     -webkit-animation-delay: 1500ms;
     overflow: hidden;
   }
-  .weathTxt {
-    position: absolute;
-    top: 9%!important;
-    right: 3%!important;
-    text-align: right;
-    color: @txtColor!important;
-    p {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 100;
-      font-size: 6pt;
-      margin-bottom: 0;
-      color: @txtColor;
-    }
+/*   .weathTxt {
+  position: absolute;
+  top: 9%!important;
+  right: 3%!important;
+  text-align: right;
+  color: @txtColor!important;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 6pt;
+    margin-bottom: 0;
+    color: @txtColor;
   }
+} */
 }
 
-.clockSec ul li {
+.clockSec ul li, ul {
   list-style-type: none;
   display: inline-block;
   clear: none;
   opacity: 100%;
+ -webkit-padding-start: 0 !important;
 }
 
-@animationSettings:dots 1s step-start 0s infinite;
+
+@animationSettings: dots 1s step-start 0s infinite;
 
 #dots {
   -webkit-animation: @animationSettings;
   -moz-animation: @animationSettings;
-  -o-animation:  @animationSettings;
-  animation:  @animationSettings;
+  -o-animation: @animationSettings;
+  animation: @animationSettings;
 }
 
 @keyframes dots {
-  50% { opacity: 0.0; }
+  50% {
+    opacity: 0.0;
+  }
 }
+
 @-webkit-keyframes dots {
-  50% { opacity: 0.0; }
+  50% {
+    opacity: 0.0;
+  }
 }
 
 #sec {
@@ -71,7 +78,7 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 3vh;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 20px 0;
   @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
     margin: 5px 0 5px 0;
   }
@@ -114,14 +121,6 @@
   }
 }
 
-.citat {
-  left: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-}
-
 #citat {
   position: absolute;
   width: 98%;
@@ -133,20 +132,12 @@
   font-size: 3vh;
 }
 
-/* WEATHER */
-.weathTxt {
+.citat {
+  left: 0;
   position: absolute;
-  top: 10%;
-  right: 4%;
-  text-align: right;
-  color: @txtColor!important;
-  &:hover {
-    -moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    -webkit-filter: drop-shadow(2px 2px 3px @txtColor);
-    filter: drop-shadow(2px 2px 3px @txtColor);
-  }
+  bottom: 0;
+  width: 100%;
+  height: 100px;
 }
 
 .myWeather {
@@ -159,25 +150,6 @@
   }
 }
 
-#weather {
-  display: none;
-}
-
-p #celsiy {
-  float: right;
-  font-size: 10px;
-}
-
-.col-xs-6-align {
-  text-align: right;
-}
-
-
-#owl-demo .item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 .verticalcenter {
   position: absolute;
@@ -203,7 +175,10 @@ p #celsiy {
     width: 40vw;
   }
 }
-
+/* .popover.bottom .arrow {visibility:hidden;} */
+.popover.bottom>.arrow:after {
+  border-bottom-color: #d6d6d6;
+}
 .popover.top>.arrow:after {
   border-top-color: #e8e8e8;
 }
@@ -297,3 +272,41 @@ p #celsiy {
     cursor: pointer;
   }
 }
+
+
+/* WEATHER */
+
+/* .weathTxt {
+  position: absolute;
+  top: 10%;
+  right: 4%;
+  text-align: right;
+  color: @txtColor!important;
+  &:hover {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-filter: drop-shadow(2px 2px 3px @txtColor);
+    filter: drop-shadow(2px 2px 3px @txtColor);
+  }
+}
+
+#weather {
+  display: none;
+}
+
+p #celsiy {
+  float: right;
+  font-size: 10px;
+}
+
+.col-xs-6-align {
+  text-align: right;
+}
+
+
+#owl-demo .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
