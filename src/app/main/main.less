@@ -21,54 +21,15 @@
     -webkit-animation-delay: 1500ms;
     overflow: hidden;
   }
-/*   .weathTxt {
-  position: absolute;
-  top: 9%!important;
-  right: 3%!important;
-  text-align: right;
-  color: @txtColor!important;
-  p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
-    font-size: 6pt;
-    margin-bottom: 0;
-    color: @txtColor;
-  }
-} */
 }
 
-.clockSec ul li, ul {
+.clockSec ul li,
+ul {
   list-style-type: none;
   display: inline-block;
   clear: none;
   opacity: 100%;
- -webkit-padding-start: 0 !important;
-}
-
-
-@animationSettings: dots 1s step-start 0s infinite;
-
-#dots {
-  -webkit-animation: @animationSettings;
-  -moz-animation: @animationSettings;
-  -o-animation: @animationSettings;
-  animation: @animationSettings;
-}
-
-@keyframes dots {
-  50% {
-    opacity: 0.0;
-  }
-}
-
-@-webkit-keyframes dots {
-  50% {
-    opacity: 0.0;
-  }
-}
-
-#sec {
-  width: 5vw;
+  -webkit-padding-start: 0 !important;
 }
 
 #hello {
@@ -76,50 +37,19 @@
   color: @txtColor;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 100;
-  font-size: 3vh;
-  margin: 10px 0 20px 0;
+  font-weight: 100!important;
+  color: #000;
+  font-size: 1.8em;
+  margin: 0 0 20px 0;
   @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
-    margin: 5px 0 5px 0;
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
   }
   @media (orientation: portrait) {
-    margin: 10px 0 10px 0;
+    margin: 0 0 10px 0;
   }
 }
 
-#day {
-  cursor: default;
-  color: @txtColor;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 100;
-  font-size: 3vh;
-  margin: 0 5px 0 0;
-}
-
-#date {
-  cursor: default;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 3vh;
-  margin-bottom: 5px;
-  @media (orientation: portrait) {
-    left: 0;
-    font-size: 5vw;
-  }
-}
-
-.clockSec #day,
-.clockSec #date {
-  display: inline;
-  vertical-align: middle;
-}
-
-.clockSec {
-  padding: 15px 0 0 0;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
-    padding:0 0 15px 0;
-  }
-}
 
 #citat {
   position: absolute;
@@ -150,7 +80,6 @@
   }
 }
 
-
 .verticalcenter {
   position: absolute;
   margin: auto;
@@ -162,23 +91,30 @@
   display: inline-flex;
 }
 
+
+.popoverBg {
+  background: -webkit-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
+  background: -o-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
+  background: -moz-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
+  background: linear-gradient(-160deg, #C4C6C5, #f2f2f2);
+}
+
 .popover {
   width: 12vw;
   text-align: center;
   border-radius: 10px;
   border: 0 transparent;
-  background: -webkit-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
-  background: -o-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
-  background: -moz-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
-  background: linear-gradient(-160deg, #C4C6C5, #f2f2f2);
+  .popoverBg;
   @media (orientation: portrait) {
     width: 40vw;
   }
 }
+
 /* .popover.bottom .arrow {visibility:hidden;} */
 .popover.bottom>.arrow:after {
   border-bottom-color: #d6d6d6;
 }
+
 .popover.top>.arrow:after {
   border-top-color: #e8e8e8;
 }
@@ -207,16 +143,15 @@
 }
 
 #searchTxt {
+  padding: 5px 10px 5px 20px;
+  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+  font-weight: normal;
   margin: 5% 0 0 0;
   position: relative;
   width: 75%;
   overflow: hidden;
-  padding: 5px 20px 5px 20px;
-  font-family: 'Open Sans', sans-serif;
   color: @txtColor;
   font-size: 2.5vh;
-  font-weight: 100;
-  text-transform: uppercase;
   background: rgba(0, 0, 0, .02);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50px;
@@ -229,26 +164,6 @@
   @media (orientation: portrait) {
     width: 65%;
   }
-}
-
-::-webkit-input-placeholder {
-  color: @placeholderColor;
-  text-align: center;
-}
-
-::-moz-placeholder {
-  color: @placeholderColor;
-  text-align: center;
-}
-
-:-moz-placeholder {
-  color: @placeholderColor;
-  text-align: center;
-}
-
-:-ms-input-placeholder {
-  color: @placeholderColor;
-  text-align: center;
 }
 
 .randwal {
@@ -271,42 +186,77 @@
   p {
     cursor: pointer;
   }
-}
-
-
-/* WEATHER */
-
-/* .weathTxt {
-  position: absolute;
-  top: 10%;
-  right: 4%;
-  text-align: right;
-  color: @txtColor!important;
-  &:hover {
-    -moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    -webkit-filter: drop-shadow(2px 2px 3px @txtColor);
-    filter: drop-shadow(2px 2px 3px @txtColor);
+  i {
+    color: #6a6a6a;
   }
 }
 
-#weather {
-  display: none;
+#weekday {
+  .dsDate .widget-clock .time
 }
 
-p #celsiy {
-  float: right;
-  font-size: 10px;
+.dateTime {
+  margin: 10px 0 10px 0;
 }
 
-.col-xs-6-align {
-  text-align: right;
+.widget-clock .time {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100!important;
+  color: #000;
 }
 
+.dsDate {
+  margin: 0;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+    margin: 0 0 10px 0;
+  }
+}
 
-#owl-demo .item img {
-  display: block;
-  width: 100%;
-  height: auto;
-} */
+.dsDate .widget-clock .time {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100!important;
+  color: #000;
+  font-size: 1.8em;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+    font-size:1.2em;
+  }
+}
+
+.clock {
+  margin: 0 auto;
+  padding: 12px;
+  color: #fff;
+}
+
+#point {
+  font-size: 1.8em;
+  position: relative;
+  animation: dots 1s ease infinite;
+  -moz-animation: dots 1s ease infinite;
+  -webkit-animation: dots 1s ease infinite;
+}
+
+.dotsKeyframes {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+;
+@keyframes dots {
+  .dotsKeyframes
+}
+
+@-webkit-keyframes dots {
+  .dotsKeyframes
+}
+
+@-moz-keyframes dots {
+  .dotsKeyframes
+}

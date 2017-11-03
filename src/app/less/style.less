@@ -73,7 +73,6 @@ body.thin::-webkit-scrollbar {
   overflow: hidden;
 }
 
-
 /*Main Title for all pages*/
 
 .maintitle {
@@ -96,7 +95,10 @@ body.thin::-webkit-scrollbar {
   overflow: hidden;
   position: absolute;
   height: auto;
-  top: 0;  left: 0;  right: 0;  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   filter: blur(@blur);
   -o-filter: blur(@blur);
   -ms-filter: blur(@blur);
@@ -107,6 +109,22 @@ body.thin::-webkit-scrollbar {
   -ms-transform: scale(@scales);
   -moz-transform: scale(@scales);
   -webkit-transform: scale(@scales);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+  .maintitle:before {
+    content: '';
+    filter: blur(0px);
+    .popoverBg;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .maintitle:before{    
+    content: '';
+    filter: blur(0px);
+    .popoverBg;
+  }
 }
 
 .maintitle h1,

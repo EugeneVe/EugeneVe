@@ -2,7 +2,6 @@
   "name": "EugeneVe",
   "version": "0.0.0",
   "dependencies": {
-    "angular-animate": "^1.6.6",
     "bower": "^1.8.2"
   },
   "scripts": {

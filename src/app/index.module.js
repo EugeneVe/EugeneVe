@@ -11,7 +11,7 @@ import { AboutDirective } from '../app/components/about/about.directive';
 import { ContactsDirective } from '../app/components/contacts/contacts.directive';
 import { PortfolioDirective } from '../app/components/portfolio/portfolio.directive';
 
-angular.module('EugeneVe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'ui.bootstrap', 'toastr'])
+angular.module('EugeneVe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'ui.bootstrap', 'toastr','ds.clock'])
   .constant('malarkey', malarkey)
   .constant('moment', moment)
   .config(config)
