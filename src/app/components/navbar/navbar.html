@@ -26,8 +26,7 @@
   </div>
 </nav>
 <script>
-
-$(document).ready(function() {  
+$(document).ready(function() {
   getWeather(); //Get the initial weather.
   setInterval(getWeather, 600000); //Update the weather every 10 minutes.
 });
@@ -39,13 +38,13 @@ function getWeather() {
     success: function(weather) {
       html = '<h2><i class="icon-' + weather.code + '"></i> ' + weather.temp + '&deg;' + weather.units.temp + '</h2>';
       html += '<ul><li>' + weather.city + '</li>'; //, '+weather.region+'
-      html += '<li class="currently">'+weather.currently+'</li>';
+      /* html += '<li class="currently">'+weather.currently+'</li>';*/
       // html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
-  
+
       $("#weather").html(html);
     },
     error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
+      $("#weather").html('<p>' + error + '</p>');
     }
   });
 }
