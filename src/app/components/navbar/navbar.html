@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <a target="top" href="https://www.yahoo.com/news/weather/ukraine/kharkiv-oblast/kharkiv-922137">
-      <div id="weather" popover-animation="true" uib-popover="Погода в Харькове" popover-append-to-body="true" popover-placement="bottom" popover-trigger="mouseenter"></div>
+      <div id="weather" popover-animation="true" uib-popover="Weather in Kharkiv" popover-append-to-body="true" popover-placement="bottom" popover-trigger="mouseenter"></div>
     </a>
     <div class="navbar-header">
       <a class="navbar-brand" href="#home">
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 function getWeather() {
   $.simpleWeather({
-    location: 'Kharkiv, UA',
+    location: 'Kharkiv',
     unit: 'c',
     success: function(weather) {
       html = '<h2><i class="icon-' + weather.code + '"></i> ' + weather.temp + '&deg;' + weather.units.temp + '</h2>';
