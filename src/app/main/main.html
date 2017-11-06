@@ -6,7 +6,7 @@
           <div class="randwal">
             <p popover-animation="true" uib-popover="Click here to change background randomly" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" onclick="changeWall()"><i class="fa fa-refresh" aria-hidden="true"></i></p>
           </div>
-          <input id="searchTxt" placeholder="&#xf002;">
+          <input id="searchTxt" placeholder="&#xf002;" title="google search">
         </div>
         <div class="col-xs-12 clockSec">
           <ul class="dateTime">
@@ -40,22 +40,22 @@ $(document).ready(function() {
   var myDate = new Date();
   var hrs = myDate.getHours();
   var greet;
-  if (hrs >= 5 && hrs <= 11) greet = 'Доброго ранку';
-  else if (hrs >= 11 && hrs <= 17) greet = 'Доброго дня';
-  else if (hrs >= 17 && hrs <= 22) greet = 'Доброго вечора';
-  else if (hrs >= 22 && hrs <= 24) greet = 'Доброї ночі';
-  else if (hrs >= 0 && hrs <= 5) greet = 'Доброї ночі';
+  if (hrs >= 5 && hrs <= 11) greet = 'Good morning';
+  else if (hrs >= 11 && hrs <= 17) greet = 'Good day';
+  else if (hrs >= 17 && hrs <= 22) greet = 'Good evening';
+  else if (hrs >= 22 && hrs <= 24) greet = 'Good night';
+  else if (hrs >= 0 && hrs <= 5) greet = 'Good night';
   document.getElementById('hello').innerHTML =
     '<span>' + greet + '</span>';
   /*DAY WEEK*/
-  var days = ['неділя', 'понеділок', 'вівторок', 'середа', 'четвер', 'п`ятниця', 'субота'];
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   Date.prototype.getDayName = function() {
     return days[this.getDay()];
   };
   var now = new Date();
   var day = now.getDayName();
   document.getElementById('weekday').innerHTML =
-    '<span>' + 'Сьогодні' + '&nbsp;&nbsp;' + day + '&nbsp;&nbsp;'+'</span>';
+    '<span>' + 'Today is' + '&nbsp;&nbsp;' + day + '&nbsp;&nbsp;'+'</span>';
 
   /*SEARCH*/
   window.onkeyup = keyup;
@@ -69,13 +69,13 @@ $(document).ready(function() {
   /*CITATES*/
   $(function citates() {
     var r_text = new Array([]);
-    r_text[0] = "Пытайся делать всё, что кажется невозможным. Жизнь слишком коротка, можешь потом пожалеть.";
-    r_text[1] = "Если мы не будем строить свое будущее, нам придется его терпеть";
-    r_text[2] = "Успех – это когда ты девять раз упал, но десять раз поднялся.";
-    r_text[3] = "Лучший способ предсказать своё будущее – стать его создателем.";
-    r_text[4] = "Каждый день надо делать дело, которое тебя пугает.";
-    r_text[5] = "Чтобы победить самые тяжелые страдания, есть два средства: это опиум - и работа.";
-    r_text[6] = "Работа избавляет нас от трех великих зол: скуки, порока, нужды.";
+    r_text[0] = "Work hard. Dream big.";
+    r_text[1] = "Life is short. Live passionately.";
+    r_text[2] = "Life is a one time offer, use it well.";
+    r_text[3] = "Live today, for tomorrow it will all be history.";
+    r_text[4] = "Whatever you are, be a good one.";
+    r_text[5] = "Everything happens for a reason.";
+    r_text[6] = "Love the life you live, and live the life you love.";
     var i = Math.round(6 * Math.random());
     document.getElementById('citat').innerHTML = (r_text[i]);
   });
