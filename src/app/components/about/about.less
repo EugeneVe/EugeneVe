@@ -1,0 +1,75 @@
+.ABB {
+  top: 12%;
+  @media (orientation: portrait) {
+    top: 10%;
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+    top: 15%;
+  }
+}
+
+.aboutMe {
+  position: relative;
+  z-index: 99999;
+  height: 60vh;
+  overflow-y: scroll;
+  -webkit-animation-delay: 1200ms;
+  padding: 20px;
+  text-align: left;
+  @media (orientation: portrait) {
+    height: 70vh;
+  }
+}
+
+.aboutMe h3 {
+  font-weight: bolder;
+}
+
+.aboutMe .col-sm-6 ul li {
+  margin-left: 0.5em;
+}
+
+.aboutMe .col-sm-6 ul li:before {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  float: left;
+  margin-left: -1.5em;
+  color: #0074D9;
+}
+
+.aboutMeBg {
+  padding-bottom: 20px;
+  margin: 20px 0 0 0;
+  width: 100vw;
+  height: 60vh;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-animation-delay: 900ms;
+  @media (orientation: portrait) {
+    width: 100vw;
+    height: 70vh;
+  }
+}
+
+.aboutMe::-webkit-scrollbar {
+  width: 8px;
+}
+
+.aboutMe.thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.aboutMe::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(100, 100, 100, 0.0);
+}
+
+.titlesAbout {
+  font-weight: bolder;
+  font-size: 1.5em;
+  line-height: 1%
+}
+
+.subTitleAbout {
+  color: #0175D8
+}
