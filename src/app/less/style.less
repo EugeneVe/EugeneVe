@@ -1,6 +1,6 @@
 :root {
-  --mainblockbg: url(/bgwall/daniel-von-appen-276283.jpg) top center fixed;
-  /* ../../assets/images/background/1.jpg https://source.unsplash.com/collection/888747/1920x1080*/
+  --mainblockbg: url(//images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?auto=format&fit=crop&w=1950&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) top center fixed;
+  /* /assets/images/background/1.jpg https://source.unsplash.com/collection/888747/1920x1080*/
 }
 
 @import url('//fonts.googleapis.com/css?family=Work+Sans:100|Open+Sans:300&subset=cyrillic');
@@ -104,11 +104,13 @@ body.thin::-webkit-scrollbar {
   -ms-filter: blur(@blur);
   -moz-filter: blur(@blur);
   -webkit-filter: blur(@blur);
-  transform: scale(@scales);
-  -o-transform: scale(@scales);
-  -ms-transform: scale(@scales);
-  -moz-transform: scale(@scales);
-  -webkit-transform: scale(@scales);
+  transform: scale(@scales) translate3d(0,0,0) translateZ(0);
+  -o-transform: scale(@scales) translate3d(0,0,0) translateZ(0);
+  -ms-transform: scale(@scales) translate3d(0,0,0) translateZ(0);
+  -moz-transform: scale(@scales) translate3d(0,0,0) translateZ(0);
+  -webkit-transform: scale(@scales) translate3d(0,0,0) translateZ(0);
+  perspective: 1000;
+  -webkit-perspective: 1000;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {

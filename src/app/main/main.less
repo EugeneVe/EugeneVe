@@ -1,11 +1,11 @@
 .homepage {
   margin: auto;
   padding-bottom: 20px;
-  width: 40vw;
+  width: 40%;
   border-radius: 5px;
   overflow: hidden;
   @media (orientation: portrait) {
-    width: 100vw;
+    width: 100%;
   }
 }
 
@@ -17,11 +17,12 @@
   .homepage {
     margin: auto;
     padding-bottom: 0;
-    width: 40vw;
+    width: 320px;
     -webkit-animation-delay: 1500ms;
     overflow: hidden;
   }
 }
+
 
 .clockSec ul li,
 ul {
@@ -45,6 +46,7 @@ ul {
     margin: 0 0 5px 0;
     font-size: 1.2em;
   }
+
   @media (orientation: portrait) {
     margin: 0 0 10px 0;
   }
@@ -110,7 +112,10 @@ ul {
   }
 }
 
+
+
 /* .popover.bottom .arrow {visibility:hidden;} */
+
 .popover.bottom>.arrow:after {
   border-bottom-color: #d6d6d6;
 }
@@ -161,6 +166,7 @@ ul {
   &:focus {
     outline: 0;
   }
+
   @media (orientation: portrait) {
     width: 65%;
   }
@@ -180,12 +186,15 @@ ul {
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+
   @media (orientation: portrait) {
     top: 14%;
   }
+
   p {
     cursor: pointer;
   }
+
   i {
     color: #6a6a6a;
   }
@@ -240,9 +249,11 @@ ul {
   0% {
     opacity: 1.0;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1.0;
   }
