@@ -2,11 +2,13 @@
   <div class="mainBlock">
     <div class="verticalcenter">
       <div class="maintitle homepage animated bounceInDown">
-        <div class="myWeather">
-          <div class="randwal">
-            <p popover-animation="true" uib-popover="Click here to change background randomly" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" onclick="changeWall()"><i class="fa fa-refresh" aria-hidden="true"></i></p>
+        <div class="col-xs-12 rand-serc">
+          <div class="col-xs-2">
+            <button id="random" popover-animation="true" uib-popover="Click here to change background randomly" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter"><i class="fa fa-refresh" aria-hidden="true" onclick="changeWall()"></i></button>
           </div>
-          <input id="searchTxt" placeholder="&#xf002;" title="google search">
+          <div class="col-xs-10">
+            <input id="searchTxt" placeholder="&#xf002;" title="google search">
+          </div>
         </div>
         <div class="col-xs-12 clockSec">
           <ul class="dateTime">
@@ -34,8 +36,6 @@
   </div>
 </div>
 <script>
-/*DAY WEEK*/
-$(document).ready(function() {
   /*GREETER*/
   var myDate = new Date();
   var hrs = myDate.getHours();
@@ -55,11 +55,12 @@ $(document).ready(function() {
   var now = new Date();
   var day = now.getDayName();
   document.getElementById('weekday').innerHTML =
-    '<span>' + 'Today is' + '&nbsp;&nbsp;' + day + '&nbsp;&nbsp;'+'</span>';
+    '<span>' + 'Today is' + '&nbsp;&nbsp;' + day + '&nbsp;&nbsp;' + '</span>';
 
   /*SEARCH*/
   window.onkeyup = keyup;
   var inputTextValue;
+
   function keyup(e) {
     inputTextValue = e.target.value;
     if (e.keyCode == 13) {
@@ -79,7 +80,7 @@ $(document).ready(function() {
     var i = Math.round(6 * Math.random());
     document.getElementById('citat').innerHTML = (r_text[i]);
   });
-})
+
 /*WALLPAPER RANDOMER*/
 var walls = [
   "url(//img1.goodfon.com/original/1680x1050/3/78/stockholm-sweden-city-in-the.jpg) center fixed",
@@ -93,11 +94,13 @@ var walls = [
   "url(//images.unsplash.com/photo-1504164996022-09080787b6b3?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) center fixed",
   "url(//images.unsplash.com/photo-1490598000245-075175152d25?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) center fixed",
 ];
+
 function getWall() {
   return walls[
     Math.floor(Math.random() * walls.length)
   ];
 }
+
 function changeWall() {
   document.documentElement.style.setProperty('--mainblockbg', getWall()); // Set the WALLPAPER from array
 }

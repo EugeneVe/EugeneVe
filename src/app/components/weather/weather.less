@@ -1,169 +1,4 @@
-@hoverColor: #262626;
-@colorNavBar: #262626;
-
-@import url('https://fonts.googleapis.com/css?family=Lato:300');
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse .navbar-nav>li>a:focus {
-  color: @colorNavBar;
-}
-
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border-color: rgba(16, 16, 16, 0.22);
-}
-
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-  color: @hoverColor;
-}
-
-.navbar-nav {
-  float: right;
-  @media only screen (orientation: portrait) {
-    width: 100% !important;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    position: relative;
-    text-align: center;
-  }
-  @media only screen and (max-device-width: 736px) {
-    width: 100% !important;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    position: relative;
-    text-align: center;
-  }
-}
-
-.navbar {
-  background: rgba(0, 0, 0, 0.4);
-  background: -webkit-linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
-  background: -o-linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
-  background: -moz-linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
-  background: linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.0));
-  margin-bottom: 0;
-}
-
-.navbar-brand {
-  padding: 10px 15px 0 15px !important;
-}
-
-.navbar,
-.navbar-inverse,
-.navbar-header {
-  border-radius: 0;
-  border: none;
-  margin-bottom: 0;
-  min-height: 68px;
-}
-
-.nav li {
-  display: inline-block;
-  color: @txtColor;
-}
-
-.navbar-inverse .navbar-nav>li>a {
-  color: @hoverColor;
-  font-family: 'Lato', sans-serif;
-  font-size: 14pt;
-  font-weight: 300;
-  padding: 24px 10px 21px 10px;
-}
-
-.nav li a:hover:after {
-  content: "";
-  background: @hoverColor;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  animation: stretchline 700ms forwards;
-  overflow: hidden;
-}
-
-@keyframes stretchline {
-  0% {
-    opacity: 0;
-    transform: scale(0.1) translate3d(0, 0, 0);
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(1.1);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(0.89);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-}
-
-.navbar-toggle {
-  margin-top: 26px;
-  margin-bottom: 23px;
-  border: none;
-}
-
-.collapse,
-.navbar-collapse {
-  margin: 0;
-}
-
-.navbar-toggle:focus {
-  background-color: transparent !important;
-}
-
-.navbar-toggle span.icon-bar {
-  transition: all 0.15s;
-}
-
-.navbar-toggle span:nth-child(2) {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
-}
-
-.navbar-toggle span:nth-child(3) {
-  opacity: 0;
-}
-
-.navbar-toggle span:nth-child(4) {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
-}
-
-.navbar-toggle.collapsed span:nth-child(2),
-.navbar-toggle.collapsed span:nth-child(4) {
-  transform: rotate(0);
-}
-
-.navbar-toggle.collapsed span:nth-child(3) {
-  opacity: 1;
-}
-
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: @colorNavBar;
-}
-
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  @media only screen and (max-device-width: 736px) {
-    left: 0px;
-    position: absolute;
-    width: 100% !important;
-    right: 0px;
-    margin: 0;
-    padding: 0;
-    .popoverBg;
-  }
-}
-
-
-/* _______________________________________________________________________________________________________________________________________WEATHER */
+/* _________________________________________________________WEATHER */
 
 @font-face {
   font-family: 'weather';
@@ -195,7 +30,7 @@
   line-height: 1.0;
   text-transform: none;
     @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
 }
 
@@ -258,11 +93,11 @@
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   margin: 0 0 10px 0;
   @media only screen and (orientation: portrait) {
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin: 10px 0 0 0;
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape)  {
-    margin: 15px 0 3px 0;
+    margin: 10px 0 3px 0;
     font-size: 1.6em;
   }
 }
@@ -293,9 +128,5 @@
   @media only screen and (orientation: portrait) {
     font-size: 0.6em;
     margin: 0 0 0 5px;
-  }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape)  {
-    margin: 5px 0 3px 5px;
-    font-size: 0.8em;
   }
 }
