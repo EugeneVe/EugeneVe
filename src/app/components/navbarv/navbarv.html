@@ -1,0 +1,47 @@
+<div class="navVertical">
+  <div id="mySidenav" class="sidenav">
+    <div class="leftTopBlock"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul>
+        <li><a href="#home" onclick="closeNav()">Home</a></li>
+        <li><a href="#portfolio" onclick="closeNav()">Portfolio</a></li>
+        <li><a href="#about" onclick="closeNav()">About</a></li>
+        <li><a href="#contacts" onclick="closeNav()">Contact</a></li>
+      </ul>
+    </div>
+    </br>
+    <div class="leftBottomBlock">
+      <ul>
+        <li><a href="">Support center</a></li>
+        <li> <a href="">Reviews</a> </li>
+        <li> <a href="">Privacy</a> </li>
+        <li> <a href="">Term of Service</a> </li>
+        </br>
+      </ul>
+      <div class="social-networks-navbar">
+        <ul class="hr">
+          <li><a href="//twitter.com/EugeneVep" class="twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="//www.facebook.com/wwwclick" class="facebook"><i class="fa fa-facebook-official"></i></a></li>
+          <li><a href="//plus.google.com/u/0/108604822962675293274" class="google"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <span class="hamburger" onclick="openNav()"><svg data-name="hamburger" id="hamburger" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><line class="cls-1" x1="1" x2="47" y1="10" y2="10"/><line class="cls-1" x1="1" x2="47" y1="24" y2="24"/><line class="cls-1" x1="1" x2="47" y1="38" y2="38"/></svg></span>
+  </div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("hamburger").style.opacity = "0";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("hamburger").style.opacity = "1";
+  document.body.style.backgroundColor = "white";
+}
+</script>
