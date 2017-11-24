@@ -4,6 +4,7 @@ import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
+import { NavbarbgDirective } from '../app/components/navbarbg/navbarbg.directive';
 import { NavbarhDirective } from '../app/components/navbarh/navbarh.directive';
 import { NavbarvDirective } from '../app/components/navbarv/navbarv.directive';
 import { WeatherDirective } from '../app/components/weather/weather.directive';
@@ -20,6 +21,7 @@ angular.module('EugeneVe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
   .config(routerConfig)
   .run(runBlock)
   .controller('MainController', MainController)
+  .directive('acmeNavbarbg', NavbarbgDirective)
   .directive('acmeNavbarh', NavbarhDirective)
   .directive('acmeNavbarv', NavbarvDirective)
   .directive('acmeWeather', WeatherDirective)

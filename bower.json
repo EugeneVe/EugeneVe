@@ -20,7 +20,8 @@
     "parallax.js": "^1.4.2",
     "moment": "^2.18.1",
     "simpleWeather": "^3.1.0",
-    "angular-ui-clock": "^0.7.0"
+    "angular-ui-clock": "^0.7.0",
+    "aos": "^2.2.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"
