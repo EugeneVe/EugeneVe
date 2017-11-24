@@ -2,6 +2,7 @@
  *  Do not remove the comments below. It's the markers used by wiredep to inject
  *  less dependencies when defined in the bower.json of your dependencies
  */
+
 // bower:less
 // endbower
 
@@ -9,6 +10,8 @@
  *  If you want to override some bootstrap variables, you have to change values here.
  *  The list of variables are listed here bower_components/bootstrap/less/variables.less
  */
+
+@txtColor: #1d1d1d;
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -24,9 +27,52 @@
   }
 }
 
+// NAVBARS
+@media only screen and (min-width:320px) and (max-width:790px) {
+  acme-navbarh {
+    display: none !important;
+  }
+  acme-navbarv {
+    display: block !important;
+    position: fixed;
+    width: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 0;
+  }
+}
+
+acme-navbarv {
+  display: none;
+}
+
+acme-navbarh {
+  display: block;
+}
+
+acme-weather {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  @media only screen and (orientation: landscape) {
+    z-index:99999;
+  }
+}
+
+acme-navbarbg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your less files automatically
  */
+
 // injector
 // endinjector
