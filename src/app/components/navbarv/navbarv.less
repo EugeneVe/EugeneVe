@@ -83,12 +83,13 @@ ul.hr {
 }
 
 .hamburger {
+  position:absolute;
   font-size: 20pt;
   margin: 0 0 0 50px;
   color: #000;
   cursor: pointer;
 
-  @media only screen and (min-device-width: 320px) and (max-device-width: 769px) {
-    margin: 0;
+  @media only screen and (min-width: 320px) and (max-width: 769px) {
+    margin: 4px 0 0 10px;
   }
 }
