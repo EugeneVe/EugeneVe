@@ -24,6 +24,10 @@
 }
 
 
+.col-xs-1mod {
+  padding: 0;
+}
+
 .clockSec ul li,
 ul {
   list-style-type: none;
@@ -199,7 +203,13 @@ ul {
 .rightempty {
   width: 100%;
   height: 35px;
-  .devicemixin
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+    width: 120%;
+    height: 25px;
+  }
 }
 
 @keyframes spin {
@@ -283,11 +293,8 @@ ul {
   .dotsKeyframes
 }
 
-.bgvid {
-  /*   min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto; */
+// VIDEO with blur
+#bgvid {
   display: none;
   position: absolute;
   top: 50%;
@@ -299,7 +306,7 @@ ul {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.bgvid2 {
+#bgvid2 {
   display: none;
   position: absolute;
   object-fit: cover;
@@ -308,13 +315,191 @@ ul {
   left: 50%;
   top: 50%;
   filter: blur(@blur);
-   -o-filter: blur(@blur);
+  -o-filter: blur(@blur);
   -ms-filter: blur(@blur);
   -moz-filter: blur(@blur);
   -webkit-filter: blur(@blur);
-   transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+
+// bootsrap toggle
+// Colors
+@brand-primary: #29b5a8;
+@brand-secondary: #ff8300;
+@gray: #6b7381;
+@gray-light: #797979;
+@gray-lighter: #797979;
+;
+
+// Button Colors
+@btn-default-color: @gray;
+@btn-default-bg: @gray-lighter;
+
+// Toggle Sizes
+@toggle-default-size: 1.5rem;
+@toggle-default-label-width: 4rem;
+@toggle-default-font-size: .75rem;
+
+
+// Mixin for Switch Colors
+// Variables: @color, @bg, @active-bg
+.toggle-color(@color: @btn-default-color;
+@bg: @btn-default-bg;
+@active-bg: @brand-primary;
+) {
+  color: @color;
+  background: @bg;
+  &:before,
+  &:after {
+    color: @color;
+  }
+  &.active {
+    background-color: @active-bg;
+  }
+}
+
+// Mixin for Default Switch Styles
+// Variables: @size, @margin, @color, @bg, @active-bg, @font-size
+.toggle-mixin(@size: @toggle-default-size;
+@margin: @toggle-default-label-width;
+@font-size: @toggle-default-font-size;
+) {
+  // color: @color;
+  // background: @bg;
+  margin: 0 @margin;
+  padding: 0;
+  position: relative;
+  border: none;
+  height: @size;
+  width: @size * 2;
+  border-radius: @size;
+
+  &:focus,
+  &.focus {
+    &,
+    &.active {
+      outline: none;
+    }
+  }
+
+  &:before,
+  &:after {
+    line-height: @size;
+    width: @margin;
+    text-align: center;
+    font-weight: 600; // color: @color;
+    font-size: @font-size;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    transition: opacity .25s;
+  }
+  &:before {
+    content: 'Off';
+    left: -@margin;
+  }
+  &:after {
+    content: 'On';
+    right: -@margin;
+    opacity: .5;
+  }
+
+  >.handle {
+    position: absolute;
+    top: (@size * .25) / 2;
+    left: (@size * .25) / 2;
+    width: @size * .75;
+    height: @size * .75;
+    border-radius: @size * .75;
+    background: #fff;
+    transition: left .25s;
+  }
+  &.active {
+    transition: background-color .25s;
+    >.handle {
+      left: @size + ((@size * .25) / 2);
+      transition: left .25s;
+    }
+    &:before {
+      opacity: .5;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &.btn-sm {
+    &:before,
+    &:after {
+      line-height: @size - 2px;
+      color: #fff;
+      letter-spacing: .75px;
+      left: @size * .275;
+      width: @size * 1.55;
+    }
+    &:before {
+      text-align: right;
+    }
+    &:after {
+      text-align: left;
+      opacity: 0;
+    }
+    &.active {
+      &:before {
+        opacity: 0;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.btn-xs {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+
+
+// Apply Mixin to different sizes & colors
+.btn-toggle {
+
+  .toggle-mixin;
+  .toggle-color;
+
+  &.btn-lg {
+    .toggle-mixin(@size: 2.5rem;
+    @font-size: 1rem;
+    @margin: 5rem;
+    );
+  }
+
+  &.btn-sm {
+    .toggle-mixin(@font-size: .55rem;
+    @margin: .5rem;
+    );
+  }
+
+  &.btn-xs {
+    .toggle-mixin(@size: 1rem;
+    @margin: 0;
+    )
+  }
+
+  &.btn-secondary {
+    .toggle-color(@active-bg: @brand-secondary);
+  }
+}
+
+.btn-toggle.btn-sm {
+  margin: 0
 }
