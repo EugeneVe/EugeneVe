@@ -22,6 +22,11 @@ export function routerConfig($routeProvider) {
       controller: 'MainController',
       controllerAs: 'vm'
     })
+    .when('/404', {
+      templateUrl: 'app/components/404/404.html',
+      controller: 'MainController',
+      controllerAs: 'vm'
+    })
     .otherwise({
       redirectTo: '/'
     });
