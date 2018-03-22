@@ -1,95 +1,82 @@
-/* vertical navbar */
-
-@white: #fff;
-
-.sidenav {
+.overlay {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 5;
+  z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgb(0, 0, 0);
+  .popoverBg;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.navVerticallogo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  color: #818181;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+.overlay a {
+  padding: 8px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 36px;
   color: #818181;
   display: block;
   transition: 0.3s;
 }
 
-.sidenav a:hover {
+.overlay a:hover,
+.overlay a:focus {
   color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.overlay .closebtn {
+  font-family: 'Lato', sans-serif;
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
+  top: -15px;
+  right: 15px;
+  font-size: 60px;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+  .overlay a {
+    font-size: 20px
   }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-.leftBottomBlock a {
-  ont-family: 'Lato', sans-serif;
-  font-size: 12pt;
-  font-weight: 100;
-  line-height: 1.4;
-}
-
-ul.hr {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  margin: 0 0 30px 0;
-}
-
-.leftBottomBlock .social-networks-navbar ul.hr li {
-  display: list-item;
-  & a {
-    padding: 0 30px 0 30px;
+  .overlay .closebtn {
+    font-size: 40px;
+    top: -5px;
+    right: 15px;
   }
 }
 
-.leftTopBlock a {
-  font-family: 'Lato', sans-serif;
-  font-size: 26pt;
-  font-weight: 100;
-  color: @white;
-}
+
 
 #hamburger {
   width: 25px;
 }
 
 .hamburger {
-  position:absolute;
+  position: absolute;
   font-size: 20pt;
   margin: 0 0 0 50px;
   color: #000;
   cursor: pointer;
 
   @media only screen and (min-width: 320px) and (max-width: 769px) {
-    margin: 4px 0 0 10px;
+    margin: 15px 0 0 15px;
   }
 }
