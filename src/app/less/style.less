@@ -16,10 +16,7 @@
 @hoverColor: #fff;
 @logotxtColor: @hoverColor;
 @logoLockColor: #f1002b;
-@navbarcolor: rgba(0,
-0,
-0,
-0.8);
+@navbarcolor: rgba(0,0,0,0.8);
 @navbar-inverse-link-color: #d2d1d1;
 @icon-font-path: '../../bootstrap/fonts/';
 
@@ -118,7 +115,7 @@ body.thin::-webkit-scrollbar {
   -webkit-perspective: 1000;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+@media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
   .maintitle:before {
     content: '';
     filter: blur(0px);

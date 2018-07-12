@@ -2,7 +2,8 @@
   "name": "EugeneVe",
   "version": "0.0.0",
   "dependencies": {
-    "bower": "^1.8.2"
+    "bower": "^1.8.2",
+    "node-gyp": "^3.6.2"
   },
   "scripts": {
     "test": "gulp test"

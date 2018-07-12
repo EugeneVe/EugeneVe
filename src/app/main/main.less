@@ -1,15 +1,18 @@
 .homepage {
   margin: auto;
   padding-bottom: 20px;
-  width: 40vw;
+  width: 40%;
   border-radius: 5px;
   overflow: hidden;
-  @media (orientation: portrait) {
-    width: 100vw;
+  @media only screen and (min-width: 128px) and (max-width: 720px) {
+    width: 100%;
+  }  
+  @media only screen and (min-width: 721px) and (max-width: 1024px) {
+    width: 50%;
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+/* @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
   p #celsiy {
     float: right;
     font-size: 6px!important;
@@ -21,7 +24,7 @@
     -webkit-animation-delay: 1500ms;
     overflow: hidden;
   }
-}
+} */
 
 
 .col-xs-1mod {
@@ -46,7 +49,7 @@ ul {
   color: #000;
   font-size: 1.8em;
   margin: 0 0 20px 0;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
     margin: 0 0 5px 0;
     font-size: 1.2em;
   }
@@ -88,10 +91,10 @@ ul {
 }
 
 .popoverBg {
-  background: -webkit-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
-  background: -o-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
-  background: -moz-linear-gradient(-160deg, #C4C6C5, #f2f2f2);
-  background: linear-gradient(-160deg, #C4C6C5, #f2f2f2);
+  background: -webkit-linear-gradient(50deg, #C4C6C5, #f2f2f2);
+  background: -o-linear-gradient(50deg, #C4C6C5, #f2f2f2);
+  background: -moz-linear-gradient(50deg, #C4C6C5, #f2f2f2);
+  background: linear-gradient(50deg, #C4C6C5, #f2f2f2);
 }
 
 .popover {
@@ -106,11 +109,11 @@ ul {
 }
 
 .popover.bottom>.arrow:after {
-  border-bottom-color: #d6d6d6;
+  border-bottom-color: #e1e1e1;
 }
 
 .popover.top>.arrow:after {
-  border-top-color: #e8e8e8;
+  border-top-color: #d6d6d6;
 }
 
 .searchWrap {
@@ -157,7 +160,7 @@ ul {
 }
 
 .devicemixin {
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
     width: 100%;
     height: 25px;
   }
@@ -187,7 +190,7 @@ ul {
 #random {
   width: 35px;
   height: 35px;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
     width: 25px;
     height: 25px;
   }
@@ -206,7 +209,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
     width: 120%;
     height: 25px;
   }
@@ -237,7 +240,7 @@ ul {
 
 .dsDate {
   margin: 0;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
     margin: 0 0 10px 0;
   }
 }
@@ -247,8 +250,8 @@ ul {
   font-weight: 100!important;
   color: #000;
   font-size: 1.8em;
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
-    font-size:1.2em;
+  @media only screen and (min-width: 320px) and (max-width: 1240px) {
+    font-size:1.1em;
   }
 }
 
