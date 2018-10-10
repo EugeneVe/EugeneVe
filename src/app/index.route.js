@@ -7,6 +7,11 @@ export function routerConfig($routeProvider) {
       controller: 'MainController',
       controllerAs: 'vm'
     })
+    .when('/home', {
+      templateUrl: 'app/main/main.html',
+      controller: 'MainController',
+      controllerAs: 'vm'
+    })
     .when('/about', {
       templateUrl: 'app/components/about/about.html',
       controller: 'MainController',
@@ -28,6 +33,8 @@ export function routerConfig($routeProvider) {
       controllerAs: 'vm'
     })
     .otherwise({
-      redirectTo: '/'
+      templateUrl: 'app/components/404/404.html',
+      controller: 'MainController',
+      controllerAs: 'vm'
     });
 }

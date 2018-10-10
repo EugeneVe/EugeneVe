@@ -1,5 +1,5 @@
-@hoverColor: #262626;
-@colorNavBar: #262626;
+@hoverColor: #000000;
+@colorNavBar: #000000;
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 .navbar-inverse .navbar-nav>li>a:hover,
@@ -45,11 +45,12 @@
 }
 
 .navbar-inverse .navbar-nav>li>a {
-  color: @hoverColor;
+  color: @colorNavBar;
   font-family: 'Lato', sans-serif;
   font-size: 14pt;
-  font-weight: 300;
+  font-weight: 100;
   padding: 24px 10px 21px 10px;
+  // text-shadow: 0 1px 1px #fff;
    @media only screen and (min-device-width: 320px) and (max-device-width: 1240px){
     font-size: 10pt;
   }
