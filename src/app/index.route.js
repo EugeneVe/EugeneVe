@@ -1,8 +1,9 @@
-export function routerConfig($routeProvider) {
+export function routerConfig($routeProvider, $locationProvider) {
 
   'ngInject';
   $routeProvider
-    .when('/', {
+    
+  .when('/', {
       templateUrl: 'app/main/main.html',
       controller: 'MainController',
       controllerAs: 'vm'
@@ -33,8 +34,10 @@ export function routerConfig($routeProvider) {
       controllerAs: 'vm'
     })
     .otherwise({
-      templateUrl: 'app/components/404/404.html',
+      redirectTo: '/404',
       controller: 'MainController',
       controllerAs: 'vm'
     });
+    $locationProvider
+    .html5Mode(true);
 }
