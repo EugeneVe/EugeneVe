@@ -1,10 +1,9 @@
 :root {
-  --mainblockbg: url(https://source.unsplash.com/1920x1080/?beach,summer) top center fixed;
-  /*  /assets/images/background/1.jpg https://source.unsplash.com/collection/888747/1920x1080 */
+    --mainblockbg: url(https://source.unsplash.com/1920x1080/?beach,summer) top center fixed;
+    /*  /assets/images/background/1.jpg https://source.unsplash.com/collection/888747/1920x1080 */
 }
 
 @import url('//fonts.googleapis.com/css?family=Work+Sans:100|Open+Sans:300&subset=cyrillic');
-
 @Blocsminheight: 100vh;
 @Blocsmaxheight: 100vh;
 @paddingAllBlocks: 100px 15px 60px 15px;
@@ -19,40 +18,40 @@
 @navbarcolor: rgba(0,0,0,0.8);
 @navbar-inverse-link-color: #d2d1d1;
 @icon-font-path: '../../bootstrap/fonts/';
-
 @media (max-width: 100vw) and (orientation: landscape) {
-  .container {
-    min-width: 95vw!important;
-  }
+    .container {
+        min-width: 95vw !important;
+    }
 }
 
-html,
+html {
+    background: #36454d url(/assets/images/tail-spin.svg) no-repeat center center;
+}
 body {
-  background-color: #000;
-  background: var(--mainblockbg);
-  background-size: @bgSize;
+    background: var(--mainblockbg);
+    background-size: @bgSize;
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 body.thin::-webkit-scrollbar {
-  width: 2px;
+    width: 2px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 0;
-  background: #36454d;
+    border-radius: 0;
+    background: #36454d;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 0;
-  background: #000;
+    border-radius: 0;
+    background: #000;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(100, 100, 100, 0.9);
+    background: rgba(100, 100, 100, 0.9);
 }
 
 .mainBlock,
@@ -60,75 +59,74 @@ body.thin::-webkit-scrollbar {
 .aboutBlock,
 .contactsBlock,
 .errorBlock {
-  padding: @paddingAllBlocks;
-  min-height: @Blocsminheight;
-  max-height: @Blocsmaxheight;
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000;
-  transform: translate3d(0, 0, 0);
-  transform: translateZ(0);
-  overflow: hidden;
+    padding: @paddingAllBlocks;
+    min-height: @Blocsminheight;
+    max-height: @Blocsmaxheight;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
+    overflow: hidden;
 }
-
 
 /* Main Title for all pages */
 
 .maintitle {
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  -webkit-animation-duration: 1s;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    -webkit-animation-duration: 1s;
 }
 
 .citat {
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 3s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 3s;
 }
 
 .maintitle:before {
-  content: '';
-  background: linear-gradient(rgba(196, 196, 196, .5), rgba(255, 255, 255, .3)), var(--mainblockbg);
-  background-size: @bgSize;
-  background-attachment: fixed;
-  overflow: hidden;
-  position: absolute;
-  height: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(@blur);
-  -o-filter: blur(@blur);
-  -ms-filter: blur(@blur);
-  -moz-filter: blur(@blur);
-  -webkit-filter: blur(@blur);
-  transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-  -o-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-  -ms-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-  -moz-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-  -webkit-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-  perspective: 1000;
-  -webkit-perspective: 1000;
+    content: '';
+    background: linear-gradient(rgba(196, 196, 196, .5), rgba(255, 255, 255, .3)), var(--mainblockbg);
+    background-size: @bgSize;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(@blur);
+    -o-filter: blur(@blur);
+    -ms-filter: blur(@blur);
+    -moz-filter: blur(@blur);
+    -webkit-filter: blur(@blur);
+    transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
+    -o-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
+    -ms-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
+    -moz-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
+    -webkit-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
+    perspective: 1000;
+    -webkit-perspective: 1000;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
-  .maintitle:before {
-    content: '';
-    filter: blur(0px);
-    .popoverBg;
-  }
+    .maintitle:before {
+        content: '';
+        filter: blur(0px);
+        .popoverBg;
+    }
 }
 
 @media only screen and (orientation: portrait) {
-  .maintitle:before {
-    content: '';
-    filter: blur(0px);
-    .popoverBg;
-  }
+    .maintitle:before {
+        content: '';
+        filter: blur(0px);
+        .popoverBg;
+    }
 }
 
 .maintitle h1,
@@ -136,65 +134,65 @@ body.thin::-webkit-scrollbar {
 .ABB h1,
 .CTB h1,
 .ERR h1 {
-  cursor: default;
-  margin: 0;
-  max-width: 100%;
-  font-family: 'Work Sans', sans-serif;
-  color: @txtColor;
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-variant: normal;
-  font-size: 8vw;
-  text-transform: uppercase;
-  @media (orientation: portrait) {
-    left: 0;
-    font-size: 16vw;
-  }
+    cursor: default;
+    margin: 0;
+    max-width: 100%;
+    font-family: 'Work Sans', sans-serif;
+    color: @txtColor;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 8vw;
+    text-transform: uppercase;
+    @media (orientation: portrait) {
+        left: 0;
+        font-size: 16vw;
+    }
 }
 
 .maintitle h4 {
-  margin: 0;
-  max-width: 100%;
-  font-family: 'Work Sans', sans-serif;
-  color: @txtColor;
-  font-size: 3vw;
-  text-transform: uppercase;
-  @media (orientation: portrait) {
-    left: 0;
-    font-size: 8vw;
-  }
+    margin: 0;
+    max-width: 100%;
+    font-family: 'Work Sans', sans-serif;
+    color: @txtColor;
+    font-size: 3vw;
+    text-transform: uppercase;
+    @media (orientation: portrait) {
+        left: 0;
+        font-size: 8vw;
+    }
 }
 
 .PFB,
 .ABB,
 .CTB,
 .ERR {
-  position: relative;
-  top: 30px;
-  text-align: center;
-  margin: auto;
-  padding-bottom: 60px;
-  width: 50vw;
-  -webkit-animation-delay: 500ms;
-  overflow: hidden;
-  @media (orientation: portrait) {
-    width: 100vw;
-  }
+    position: relative;
+    top: 30px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 60px;
+    width: 50vw;
+    -webkit-animation-delay: 500ms;
+    overflow: hidden;
+    @media (orientation: portrait) {
+        width: 100vw;
+    }
 }
 
 .randwal {
-  font-size: 8pt;
+    font-size: 8pt;
 }
 
 a {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .siteuc {
-  -webkit-animation-delay: 900ms;
-  width: 20vw;
-  padding: 5% 0 0 0;
-  @media only screen and (orientation: portrait) {
-    width:40vw;
-  }
+    -webkit-animation-delay: 900ms;
+    width: 20vw;
+    padding: 5% 0 0 0;
+    @media only screen and (orientation: portrait) {
+        width:40vw;
+    }
 }
