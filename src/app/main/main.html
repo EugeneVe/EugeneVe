@@ -1,17 +1,21 @@
 <div class="overflow">
   <div class="mainBlock">
     <video id="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
-      <source src="https://static.videezy.com/system/resources/previews/000/004/931/original/Backyard_4K_Living_Background.mp4" type="video/mp4">
+      <source src="https://static.videezy.com/system/resources/previews/000/004/931/original/Backyard_4K_Living_Background.mp4"
+        type="video/mp4">
     </video>
     <div class="verticalcenter">
       <div class="maintitle homepage animated bounceInDown">
         <video id="bgvid2" autoplay="autoplay" muted="muted" preload="auto" loop>
-          <source src="https://static.videezy.com/system/resources/previews/000/004/931/original/Backyard_4K_Living_Background.mp4" type="video/mp4">
+          <source src="https://static.videezy.com/system/resources/previews/000/004/931/original/Backyard_4K_Living_Background.mp4"
+            type="video/mp4">
         </video>
         <div class="col-xs-12 rand-serc">
           <div class="col-xs-1 col-xs-1mod">
             <div class="svgrandom">
-              <svg id="random" popover-animation="true" uib-popover="Click here to change background randomly" popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" enable-background="new 0 0 40 40" viewBox="0 0 40 40" xml:space="preserve" onclick="changeWall()" fill="#797979">
+              <svg id="random" popover-animation="true" uib-popover="Click here to change background randomly"
+                popover-append-to-body="true" popover-placement="top" popover-trigger="mouseenter" enable-background="new 0 0 40 40"
+                viewBox="0 0 40 40" xml:space="preserve" onclick="changeWall()">
                 <g>
                   <path d="M9.1,26c-0.6,0-1-0.4-1-1s0.4-1,1-1c2,0,4-0.8,5.4-2.2c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4C14.1,25,11.6,26,9.1,26z" />
                 </g>
@@ -28,7 +32,8 @@
           </div>
           <div class="col-xs-1 col-xs-1mod">
             <div class="rightempty">
-              <button onclick="videoWall()" alt="Video background on/off" title="Video background on/off" type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+              <button onclick="videoWall()" alt="Video background on/off" title="Video background on/off" type="button"
+                class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
                 <div class="handle"></div>
               </button>
             </div>
@@ -37,9 +42,13 @@
         <div class="col-xs-12 clockSec">
           <ul class="dateTime">
             <h4>
-              <li id="hours"><ds-widget-clock show-digital digital-format="'HH'"></ds-widget-clock></li>
+              <li id="hours">
+                <ds-widget-clock show-digital digital-format="'HH'"></ds-widget-clock>
+              </li>
               <li id="point">:</li>
-              <li id="min"><ds-widget-clock show-digital digital-format="'mm'"></ds-widget-clock></li>
+              <li id="min">
+                <ds-widget-clock show-digital digital-format="'mm'"></ds-widget-clock>
+              </li>
             </h4>
           </ul>
           <h1 id="hello"></h1>
@@ -55,89 +64,91 @@
           </div>
         </div>
       </div>
-      
+
       <div class="citat animated fadeIn">
         <div class="unsplash"><a href="https://unsplash.com/search/photos/beach-summer">
-          <img src="https://cdn.worldvectorlogo.com/logos/unsplash-celebration-logo.svg" alt="Unsplash" title="Unsplash">
-          </a></div><p id="citat" class="animated fadeIn"></p>
+            <img src="https://cdn.worldvectorlogo.com/logos/unsplash-celebration-logo.svg" alt="Unsplash" title="Unsplash">
+          </a></div>
+        <p id="citat" class="animated fadeIn"></p>
       </div>
     </div>
   </div>
 </div>
-<script>
-/*GREETER*/
-var myDate = new Date();
-var hrs = myDate.getHours();
-var greet;
-if (hrs >= 5 && hrs <= 11) greet = 'Good morning';
-else if (hrs >= 11 && hrs <= 17) greet = 'Good day';
-else if (hrs >= 17 && hrs <= 22) greet = 'Good evening';
-else if (hrs >= 22 && hrs <= 24) greet = 'Good night';
-else if (hrs >= 0 && hrs <= 5) greet = 'Good night';
-document.getElementById('hello').innerHTML =
-  '<span>' + greet + '</span>';
-/*DAY WEEK*/
-var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-Date.prototype.getDayName = function() {
-  return days[this.getDay()];
-};
-var now = new Date();
-var day = now.getDayName();
-document.getElementById('weekday').innerHTML =
-  '<span>' + 'Today is' + '&nbsp;&nbsp;' + day + '&nbsp;&nbsp;' + '</span>';
+<script type="text/javascript" async>
+  /*GREETER*/
+  var myDate = new Date();
+  var hrs = myDate.getHours();
+  var greet;
+  if (hrs >= 5 && hrs <= 11) greet = 'Good morning';
+  else if (hrs >= 11 && hrs <= 17) greet = 'Good day';
+  else if (hrs >= 17 && hrs <= 22) greet = 'Good evening';
+  else if (hrs >= 22 && hrs <= 24) greet = 'Good night';
+  else if (hrs >= 0 && hrs <= 5) greet = 'Good night';
+  document.getElementById('hello').innerHTML =
+    '<span>' + greet + '</span>';
+  /*DAY WEEK*/
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  Date.prototype.getDayName = function () {
+    return days[this.getDay()];
+  };
+  var now = new Date();
+  var day = now.getDayName();
+  document.getElementById('weekday').innerHTML =
+    '<span>' + 'Today is' + '&nbsp;&nbsp;' + day + '&nbsp;&nbsp;' + '</span>';
 
-/*SEARCH*/
-window.onkeyup = keyup;
-var inputTextValue;
+  /*SEARCH*/
+  window.onkeyup = keyup;
+  var inputTextValue;
 
-function keyup(e) {
-  inputTextValue = e.target.value;
-  if (e.keyCode == 13) {
-    window.open('https://www.google.com.ua/search?q=' + inputTextValue, '_blank');
-  }
-}
-/*CITATES*/
-$(function citates() {
-  var r_text = new Array([]);
-  r_text[0] = "Work hard. Dream big.";
-  r_text[1] = "Life is short. Live passionately.";
-  r_text[2] = "Life is a one time offer, use it well.";
-  r_text[3] = "Live today, for tomorrow it will all be history.";
-  r_text[4] = "Whatever you are, be a good one.";
-  r_text[5] = "Everything happens for a reason.";
-  r_text[6] = "Love the life you live, and live the life you love.";
-  var i = Math.round(6 * Math.random());
-  document.getElementById('citat').innerHTML = (r_text[i]);
-});
-
-/*WALLPAPER RANDOMER*/
-var walls = [
-  "url(//source.unsplash.com/1920x1080/?sport,bright) center fixed",
-  "url(//source.unsplash.com/1920x1080/?cars,bright) center fixed",
-  "url(//source.unsplash.com/1920x1080/?girls,bright) center fixed",
-  "url(//source.unsplash.com/1920x1080/?bright-sand) center fixed",
-  "url(//source.unsplash.com/1920x1080/?bright-japan) center fixed",
-  "url(//source.unsplash.com/1920x1080/?programming,bright) center fixed"
-];
-
-function getWall() {
-  return walls[
-    Math.floor(Math.random() * walls.length)
-  ];
-}
-
-function changeWall() {
-  document.documentElement.style.setProperty('--mainblockbg', getWall()); // Set the WALLPAPER from array
-}
-
-// show stop/play video background
-function videoWall() {
-  $('#bgvid,#bgvid2').fadeToggle('fast', function() {
-    if ($('#bgvid,#bgvid2').is(":visible")) {
-      $('video').trigger('play');
-    } else {
-      $('video').trigger('pause');
+  function keyup(e) {
+    inputTextValue = e.target.value;
+    if (e.keyCode == 13) {
+      window.open('https://www.google.com.ua/search?q=' + inputTextValue, '_blank');
     }
-  })
-}
+  }
+  /*CITATES*/
+  $(function citates() {
+    var r_text = new Array([]);
+    r_text[0] = "Work hard. Dream big.";
+    r_text[1] = "Life is short. Live passionately.";
+    r_text[2] = "Life is a one time offer, use it well.";
+    r_text[3] = "Live today, for tomorrow it will all be history.";
+    r_text[4] = "Whatever you are, be a good one.";
+    r_text[5] = "Everything happens for a reason.";
+    r_text[6] = "Love the life you live, and live the life you love.";
+    var i = Math.round(6 * Math.random());
+    document.getElementById('citat').innerHTML = (r_text[i]);
+  });
+
+  /*WALLPAPER RANDOMER*/
+  var walls = [
+    "url(//source.unsplash.com/1920x1080/?sport,bright) center fixed",
+    "url(//source.unsplash.com/1920x1080/?cars,bright) center fixed",
+    "url(//source.unsplash.com/1920x1080/?girls,bright) center fixed",
+    "url(//source.unsplash.com/1920x1080/?bright-sand) center fixed",
+    "url(//source.unsplash.com/1920x1080/?bright-japan) center fixed",
+    "url(//source.unsplash.com/1920x1080/?programming,bright) center fixed"
+  ];
+
+  function getWall() {
+    return walls[
+      Math.floor(Math.random() * walls.length)
+    ];
+  }
+
+  function changeWall() {
+    document.documentElement.style.setProperty('--mainblockbg', getWall()); // Set the WALLPAPER from array
+  }
+
+  // show stop/play video background
+  function videoWall() {
+    $('#bgvid,#bgvid2').fadeToggle('fast', function () {
+      if ($('#bgvid,#bgvid2').is(":visible")) {
+        $('video').trigger('play');
+      } else {
+        $('video').trigger('pause');
+      }
+    })
+  }
+
 </script>
