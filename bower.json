@@ -19,7 +19,16 @@
     "angular": "~1.5.3",
     "moment": "^2.18.1",
     "simpleWeather": "^3.1.0",
-    "angular-ui-clock": "^0.7.0"
+    "angular-ui-clock": "^0.7.0",
+    "lightgallery": "^1.6.11",
+    "lg-thumbnail": "^1.1.0",
+    "lg-autoplay": "^1.0.4",
+    "lg-video": "^1.2.2",
+    "lg-fullscreen": "^1.0.1",
+    "lg-pager": "^1.0.2",
+    "lg-zoom": "^1.1.0",
+    "lg-hash": "^1.0.4",
+    "lg-share": "^1.1.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"

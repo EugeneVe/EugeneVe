@@ -1,9 +1,10 @@
 .ABB {
-  top: 12%;
+  width: 99vw;
+  top: 68px;
   @media (orientation: portrait) {
     top: 10%;
   }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 1240px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
     top: 15%;
   }
 }
@@ -11,10 +12,11 @@
 .aboutMe {
   position: relative;
   z-index: 99999;
-  height: 60vh;
+  height: 65vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   -webkit-animation-delay: 1200ms;
-  padding: 20px;
+  padding: 20px 20px 20px 25px;
   text-align: left;
   @media (orientation: portrait) {
     top: 4%;
@@ -39,30 +41,36 @@
 }
 
 .aboutMeBg {
-  padding-bottom: 20px;
-  margin: 20px 0 0 0;
-  width: 100vw;
-  height: 60vh;
-  border-radius: 5px;
+  margin: 20px auto;
+  width: 70vw;
+  height: 65vh;
+  border-radius: 20px;
   overflow: hidden;
   -webkit-animation-delay: 900ms;
+  -webkit-filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.5));
   @media (orientation: portrait) {
     width: 100vw;
-    height: 80vh;
+    height: calc(~"87vh - 60px");
   }
 }
 
 .aboutMe::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 .aboutMe.thin::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 .aboutMe::-webkit-scrollbar-track {
   border-radius: 0;
   background: rgba(100, 100, 100, 0.0);
+}
+
+.aboutMe::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .titlesAbout {

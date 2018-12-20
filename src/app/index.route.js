@@ -18,7 +18,7 @@ export function routerConfig($routeProvider, $locationProvider) {
       controller: 'MainController',
       controllerAs: 'vm'
     })
-    .when('/portfolio', {
+    .when('/my_products', {
       templateUrl: 'app/components/portfolio/portfolio.html',
       controller: 'MainController',
       controllerAs: 'vm'
