@@ -40,10 +40,23 @@
   color: #0074D9;
 }
 
+.aboutMe > .col-sm-12 ul li a {
+  color: #000;
+  text-decoration: underline!important;
+}
+
+.aboutMe > .col-sm-12 ul li:before {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  float: left;
+  margin-left: -1.5em;
+  color: #0074D9;
+}
+
 .aboutMeBg {
   margin: 20px auto;
   width: 70vw;
-  height: 65vh;
+  height: 63vh;
   border-radius: 20px;
   overflow: hidden;
   -webkit-animation-delay: 900ms;
@@ -51,7 +64,7 @@
   filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.5));
   @media (orientation: portrait) {
     width: 99vw;
-    height: calc(~"87vh - 60px");
+    height: calc(~"85vh - 60px");
   }
 }
 
