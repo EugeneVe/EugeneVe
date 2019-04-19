@@ -65,16 +65,21 @@
   text-decoration: none;
 }
 
+@filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5));
+
 #myFooter .facebook:hover {
-  color: #0077e2;
+  color: #3b5998;
+  filter:@filter;
 }
 
-#myFooter .google:hover {
-  color: #ef1a1a;
+#myFooter .linkedin:hover {
+  color: #0077B5;
+  filter:@filter;
 }
 
 #myFooter .twitter:hover {
-  color: #00aced;
+  color: #00acee;
+  filter:@filter;
 }
 
 @media screen and (max-width: 767px) {
