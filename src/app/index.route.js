@@ -5,37 +5,34 @@ export function routerConfig($routeProvider, $locationProvider) {
     
   .when('/', {
       templateUrl: 'app/main/main.html',
-      controller: 'MainController',
       controllerAs: 'vm'
     })
     .when('/home', {
       templateUrl: 'app/main/main.html',
-      controller: 'MainController',
       controllerAs: 'vm'
     })
     .when('/about', {
       templateUrl: 'app/components/about/about.html',
-      controller: 'MainController',
       controllerAs: 'vm'
     })
     .when('/my_products', {
       templateUrl: 'app/components/portfolio/portfolio.html',
-      controller: 'MainController',
       controllerAs: 'vm'
     })
     .when('/contacts', {
       templateUrl: 'app/components/contacts/contacts.html',
-      controller: 'MainController',
       controllerAs: 'vm'
     })
     .when('/404', {
       templateUrl: 'app/components/404/404.html',
-      controller: 'MainController',
+      controllerAs: 'vm'
+    })
+    .when('/email_sent', {
+      templateUrl: 'app/components/email/email.html',
       controllerAs: 'vm'
     })
     .otherwise({
       redirectTo: '/404',
-      controller: 'MainController',
       controllerAs: 'vm'
     });
     $locationProvider

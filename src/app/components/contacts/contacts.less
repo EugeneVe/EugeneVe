@@ -9,7 +9,9 @@
 }
 
 .links {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .facebook {
@@ -54,4 +56,66 @@
 .toggle-section:focus .main-text {
   height: 1.2em;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.form__wrap{
+  margin-top: 40px;
+}
+#form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.email__form{
+  width: 320px!important;
+  margin: -8px auto;
+}
+
+.send__button{
+  height: 50px;
+  color: @colorNavBar;
+  background: none;
+  border-color: rgba(0, 0, 0, 0.0);
+  margin:-33px auto 33px!important;
+  bottom: -66px;
+  padding: 0;
+  transition: .2s;
+  font-family: 'Lato', sans-serif;
+  font-size: 14pt;
+  font-weight: 100;
+  &:hover{
+    filter:drop-shadow(0 2px 3px rgba(0, 0, 0, .0));
+  }
+  &:focus{
+    outline-style: none;
+  }
+}
+input[type=file] {
+  cursor: pointer;
+  width: 180px;
+  height: 34px;
+  overflow: hidden;
+}
+
+input[type=file]:before {
+  height: 35px;
+  font-size: 2.5vh;
+  line-height: 0px;
+  content: 'Select file:';
+  background: rgba(0, 0, 0, .0);
+  border: 0px solid #000;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  padding-top: 8px!important;
+  text-transform: uppercase;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.input__file{
+  padding-top: 5px!important;
+  text-align: right!important;
 }

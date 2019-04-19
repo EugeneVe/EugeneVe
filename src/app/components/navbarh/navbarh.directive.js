@@ -15,6 +15,8 @@ export function NavbarhDirective() {
   };
 
   return directive;
+
+  
 }
 
 class NavbarhController {
