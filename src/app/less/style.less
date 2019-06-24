@@ -92,6 +92,7 @@ body.thin::-webkit-scrollbar {
     position: relative;
     overflow: hidden;
     -webkit-animation-duration: 1s;
+    border:1px solid transparent;
 }
 
 .citat {
@@ -104,24 +105,23 @@ body.thin::-webkit-scrollbar {
     background: linear-gradient(rgba(196, 196, 196, .5), rgba(255, 255, 255, .3)), var(--mainblockbg);
     background-size: @bgSize;
     background-attachment: fixed;
+    background-position: center;
     overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom:0;
     filter: blur(@blur);
     -o-filter: blur(@blur);
     -ms-filter: blur(@blur);
     -moz-filter: blur(@blur);
     -webkit-filter: blur(@blur);
-    transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-    -o-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-    -ms-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-    -moz-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-    -webkit-transform: scale(@scales) translate3d(0, 0, 0) translateZ(0);
-    perspective: 1000;
-    -webkit-perspective: 1000;
+    transform: scale(@scales);
+    -o-transform: scale(@scales); 
+    -ms-transform: scale(@scales); 
+    -moz-transform: scale(@scales); 
+    -webkit-transform: scale(@scales); 
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1240px) and (orientation: landscape) {
