@@ -1,5 +1,5 @@
 :root {
-    --mainblockbg: url('//source.unsplash.com/collection/888747/1920x1080') top center fixed;
+    --mainblockbg: url('//img4.goodfon.com/original/1920x1200/8/b4/noutbuk-telefon-naushniki-kofe-tsvetok-tekhnika.jpg') top center fixed;
     /*  /assets/images/1.jpg https://source.unsplash.com/collection/888747/1920x1080 */
 }
 
@@ -8,8 +8,8 @@
 @Blocsmaxheight: 100vh;
 @paddingAllBlocks: 0;
 @bgSize: cover;
-@scales: 1.35;
-@blur: 25px;
+@scales: 1.10;
+@blur: 15px;
 @txtColor: #1d1d1d;
 @placeholderColor: #595959;
 @hoverColor: #fff;
@@ -105,13 +105,13 @@ body.thin::-webkit-scrollbar {
     background: linear-gradient(rgba(196, 196, 196, .5), rgba(255, 255, 255, .3)), var(--mainblockbg);
     background-size: @bgSize;
     background-attachment: fixed;
-    background-position: center;
+    background-position: -25px 25px center;
     overflow: hidden;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom:0;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
     filter: blur(@blur);
     -o-filter: blur(@blur);
     -ms-filter: blur(@blur);

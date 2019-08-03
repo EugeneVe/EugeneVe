@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "@dogstudio/highway": "^2.1.2",
+    "animate.css": "^3.7.2",
     "bower": "^1.8.4",
     "highway": "0.0.5",
     "node-gyp": "^3.8.0"
