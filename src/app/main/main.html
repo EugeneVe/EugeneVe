@@ -1,16 +1,15 @@
 <div class="overflow fade-in one">
-  <div class="mainBlock animated zoomIn">
-    <video id="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
+  <div class="mainBlock "><!-- animated zoomIn -->
+    <!-- <video id="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
       <source src="assets/video/1720219.mp4" 
-      
         type="video/mp4">
-    </video>
+    </video> -->
     <div class="verticalcenter">
       <div class="maintitle homepage">
-        <video id="bgvid2" autoplay="autoplay" muted="muted" preload="auto" loop>
+        <!-- <video id="bgvid2" autoplay="autoplay" muted="muted" preload="auto" loop>
           <source src="assets/video/1720219.mp4"
             type="video/mp4">
-        </video>
+        </video> -->
         <div class="col-xs-12 rand-serc">
           <div class="col-xs-1 col-xs-1mod">
             <div class="svgrandom">
@@ -32,12 +31,12 @@
             <input id="searchTxt" placeholder=" &#xf002;" title="google search">
           </div>
           <div class="col-xs-1 col-xs-1mod">
-            <div class="rightempty">
+            <!-- <div class="rightempty">
               <button onclick="videoWall()" alt="Video background on/off" title="Video background on/off" type="button"
                 class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
                 <div class="handle"></div>
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-xs-12 clockSec">
@@ -66,7 +65,7 @@
         </div>
       </div>
 
-      <div class="citat animated fadeIn">
+      <div class="citat">
         <div class="unsplash"><a href="https://unsplash.com/search/photos/beach-summer">
             <img src="https://cdn.worldvectorlogo.com/logos/unsplash-celebration-logo.svg" alt="Unsplash" title="Unsplash">
           </a></div>
@@ -149,14 +148,14 @@
   }
 
   // show stop/play video background
-  function videoWall() {
-    $('#bgvid,#bgvid2').fadeToggle('fast', function () {
-      if ($('#bgvid,#bgvid2').is(":visible")) {
-        $('video').trigger('play');
-      } else {
-        $('video').trigger('pause');
-      }
-    })
-  }
+  // function videoWall() {
+  //   $('#bgvid,#bgvid2').fadeToggle('fast', function () {
+  //     if ($('#bgvid,#bgvid2').is(":visible")) {
+  //       $('video').trigger('play');
+  //     } else {
+  //       $('video').trigger('pause');
+  //     }
+  //   })
+  // }
 
 </script>
